@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dellsoares.github.io/ws-tools/sitemap.xml

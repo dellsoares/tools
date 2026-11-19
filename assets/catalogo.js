@@ -2,7 +2,8 @@
 'use strict';
 const tools={
  'gerador-link-whatsapp':{url:'./gerador-link-whatsapp/?embed=1',title:'Gerador de link do WhatsApp'},
- 'contador-caracteres-palavras':{url:'./contador-caracteres-palavras/?embed=1',title:'Contador de palavras e caracteres'}
+ 'contador-caracteres-palavras':{url:'./contador-caracteres-palavras/?embed=1',title:'Contador de palavras e caracteres'},
+ 'gerador-qr-code':{url:'./gerador-qr-code/?embed=1',title:'Gerador de QR Code'}
 };
 const modal=document.getElementById('tool-modal');
 const frame=document.getElementById('tool-iframe');

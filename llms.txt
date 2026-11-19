@@ -1,0 +1,13 @@
+# WS Tools
+
+Portal brasileiro de ferramentas gratuitas, sem cadastro e com processamento local no navegador. Criado por Wendell Soares.
+
+Website: https://dellsoares.github.io/ws-tools/
+
+## Ferramentas
+
+- [Gerador de link do WhatsApp](https://dellsoares.github.io/ws-tools/gerador-link-whatsapp/): cria endereços wa.me com mensagem opcional, cópia do link, teste e QR Code. Não envia mensagens automaticamente.
+- [Contador de palavras e caracteres](https://dellsoares.github.io/ws-tools/contador-caracteres-palavras/): conta palavras, caracteres, frases, parágrafos e linhas e estima tempo de leitura.
+- [Gerador de QR Code](https://dellsoares.github.io/ws-tools/gerador-qr-code/): converte textos, links, dados de Wi-Fi e códigos Pix Copia e Cola completos em QR Code estático, com PNG para download. Não cria cobrança Pix.
+
+Cada ferramenta tem instruções e perguntas frequentes em sua própria página. Este arquivo serve como índice textual opcional, sem prometer tratamento especial pelos buscadores.
