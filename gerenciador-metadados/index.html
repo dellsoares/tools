@@ -71,7 +71,7 @@ body.embed .topbar,body.embed .tool-hero,body.embed .guide,body.embed .faq,body.
       <div class="dropzone" id="dropzone">
         <div class="drop-icon" aria-hidden="true">⇧</div>
         <h2 id="drop-title">Selecione músicas para analisar</h2>
-        <p id="drop-copy">MP3, FLAC, M4A, OGG, Opus, WAV, AIFF, WMA e outros formatos compatíveis.</p>
+        <p id="drop-copy">MP3, FLAC, M4A, OGG, Opus, WAV, AIFF, WMA, APE, WavPack e outros formatos compatíveis.</p>
         <label class="btn primary" for="file-input">Selecionar arquivos</label>
         <input class="file-input" id="file-input" type="file" multiple accept=".mp3,.flac,.m4a,.m4b,.mp4,.ogg,.oga,.opus,.wav,.aiff,.aif,.ape,.wv,.mpc,.wma,.aac,.tta,.dsf,.dff,.jpg,.jpeg,.tif,.tiff,.png,.webp,.heic,.heif,.avif,.gif,.bmp">
         <div class="support" id="support-copy">Você pode selecionar mais de um arquivo. O processamento será feito um por vez.</div>
@@ -136,7 +136,7 @@ body.embed .topbar,body.embed .tool-hero,body.embed .guide,body.embed .faq,body.
 <script type="module">
 const $ = id => document.getElementById(id);
 const state = { mode:'music', records:[], active:-1, libs:{}, loading:false, results:[] };
-const audioExt = new Set(['mp3','mp2','aac','flac','m4a','m4b','mp4','ogg','oga','opus','spx','wav','aif','aiff','aifc','mpc','wv','ape','tta','dsf','dff','dsdiff','wma','asf','mka','mkv','webm']);
+const audioExt = new Set(['mp3','mp2','aac','flac','m4a','m4b','mp4','aax','ogg','oga','opus','spx','wav','aif','aiff','aifc','mpc','wv','ape','tta','dsf','dff','dsdiff','wma','asf','mka','mkv','webm','mod','s3m','xm','it','shn']);
 const imageExt = new Set(['jpg','jpeg','tif','tiff','png','webp','heic','heif','avif','gif','bmp','dng','cr2','cr3','nef','arw','orf','rw2','psd']);
 const extOf = name => (name.split('.').pop()||'').toLowerCase();
 const fmtBytes = n => n < 1024 ? n+' B' : n < 1048576 ? (n/1024).toFixed(1)+' KB' : (n/1048576).toFixed(2)+' MB';
@@ -146,12 +146,30 @@ const setStatus = (message,kind='') => { const el=$('status'); el.textContent=me
 const escapeHTML = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const modeLabel = () => state.mode==='music'?'música':'imagem';
 
+async function importTagLibFrom(base){
+  const [fileRef,byteVector,variant] = await Promise.all([
+    import(base + '/fileRef.js'),
+    import(base + '/byteVector.js'),
+    import(base + '/toolkit/variant.js')
+  ]);
+  if(!fileRef.FileRef || !byteVector.ByteVector || !variant.Variant) {
+    throw new Error('O CDN respondeu, mas não entregou os módulos esperados do TagLib-TS.');
+  }
+  return {FileRef:fileRef.FileRef,ByteVector:byteVector.ByteVector,Variant:variant.Variant};
+}
 function loadAudioLib(){
-  if(!state.libs.audio) state.libs.audio = Promise.all([
-    import('https://esm.sh/@dantheman827/taglib-ts@1.2.2/fileRef.js'),
-    import('https://esm.sh/@dantheman827/taglib-ts@1.2.2/byteVector.js'),
-    import('https://esm.sh/@dantheman827/taglib-ts@1.2.2/toolkit/variant.js')
-  ]).then(([fileRef,byteVector,variant])=>({FileRef:fileRef.FileRef,ByteVector:byteVector.ByteVector,Variant:variant.Variant}));
+  if(!state.libs.audio) state.libs.audio = (async()=>{
+    const bases = [
+      'https://esm.sh/@dantheman827/taglib-ts@0.1.5',
+      'https://cdn.jsdelivr.net/npm/@dantheman827/taglib-ts@0.1.5'
+    ];
+    let lastError;
+    for(const base of bases){
+      try { return await importTagLibFrom(base); }
+      catch(error){ lastError=error; }
+    }
+    throw new Error('Não foi possível carregar o editor de metadados de áudio. Verifique a conexão e tente novamente. Detalhe: '+(lastError?.message||'CDNs indisponíveis.'));
+  })();
   return state.libs.audio;
 }
 function loadExifLib(){
@@ -178,8 +196,8 @@ function setMode(mode){
   $('mode-image').setAttribute('aria-selected',String(mode==='image'));
   $('file-input').value='';$('queue').replaceChildren();clearEditor();
   $('drop-title').textContent=mode==='music'?'Selecione músicas para analisar':'Selecione imagens para analisar';
-  $('drop-copy').textContent=mode==='music'?'MP3, FLAC, M4A, OGG, Opus, WAV, AIFF, WMA e outros formatos compatíveis.':'JPEG, TIFF, PNG, WebP, HEIC, HEIF, AVIF, GIF, BMP e formatos fotográficos reconhecidos pelo ExifTool.';
-  $('file-input').accept=mode==='music'?'.mp3,.mp2,.aac,.flac,.m4a,.m4b,.mp4,.ogg,.oga,.opus,.spx,.wav,.aif,.aiff,.aifc,.mpc,.wv,.ape,.tta,.dsf,.dff,.dsdiff,.wma,.asf,.mka,.mkv,.webm':'image/*,.jpg,.jpeg,.tif,.tiff,.png,.webp,.heic,.heif,.avif,.gif,.bmp,.dng,.cr2,.cr3,.nef,.arw,.orf,.rw2,.psd';
+  $('drop-copy').textContent=mode==='music'?'MP3, FLAC, M4A, OGG, Opus, WAV, AIFF, WMA, APE, WavPack e outros formatos compatíveis.':'JPEG, TIFF, PNG, WebP, HEIC, HEIF, AVIF, GIF, BMP e formatos fotográficos reconhecidos pelo ExifTool.';
+  $('file-input').accept=mode==='music'?'.mp3,.mp2,.aac,.flac,.m4a,.m4b,.mp4,.aax,.ogg,.oga,.opus,.spx,.wav,.aif,.aiff,.aifc,.mpc,.wv,.ape,.tta,.dsf,.dff,.dsdiff,.wma,.asf,.mka,.mkv,.webm,.mod,.s3m,.xm,.it,.shn':'image/*,.jpg,.jpeg,.tif,.tiff,.png,.webp,.heic,.heif,.avif,.gif,.bmp,.dng,.cr2,.cr3,.nef,.arw,.orf,.rw2,.psd';
 }
 $('mode-music').addEventListener('click',()=>setMode('music'));
 $('mode-image').addEventListener('click',()=>setMode('image'));
@@ -358,7 +376,11 @@ async function applyAudio(rec,ops,coverAction,coverFile,clearAll){
   if(!ref?.isValid)throw new Error('Formato de áudio não reconhecido.');
   const props=ref.properties();
   if(clearAll)props.clear();
-  for(const op of ops){if(op.remove)props.delete(op.key);else props.set(op.key,op.values);}
+  for(const op of ops){
+    if(op.remove) props.delete(op.key);
+    else if(typeof props.replace==='function') props.replace(op.key,op.values);
+    else props.set(op.key,op.values);
+  }
   const unsupported=ref.setProperties(props);
   let coverWarning='';
   if(clearAll||coverAction==='remove')ref.setComplexProperties('PICTURE',[]);
@@ -419,7 +441,7 @@ async function saveAll(){
 }
 $('save-button').addEventListener('click',saveAll);
 
-$('file-input').accept='.mp3,.mp2,.aac,.flac,.m4a,.m4b,.mp4,.ogg,.oga,.opus,.spx,.wav,.aif,.aiff,.aifc,.mpc,.wv,.ape,.tta,.dsf,.dff,.dsdiff,.wma,.asf,.mka,.mkv,.webm';
+$('file-input').accept='.mp3,.mp2,.aac,.flac,.m4a,.m4b,.mp4,.aax,.ogg,.oga,.opus,.spx,.wav,.aif,.aiff,.aifc,.mpc,.wv,.ape,.tta,.dsf,.dff,.dsdiff,.wma,.asf,.mka,.mkv,.webm,.mod,.s3m,.xm,.it,.shn';
 document.body.classList.toggle('embed',new URLSearchParams(location.search).get('embed')==='1');
 </script>
 </body>

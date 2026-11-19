@@ -24,7 +24,7 @@ Este arquivo é um resumo informativo das licenças declaradas pelos projetos. C
 
 Atualização do Metadados WS
 
-4. @dantheman827/taglib-ts — versão 1.2.2
+4. @dantheman827/taglib-ts — versão 0.1.5
    Projeto: https://github.com/dantheman827/taglib-ts
    Licença declarada: LGPL-2.1-or-later
    Uso: leitura e gravação de tags de áudio, propriedades avançadas e capas em formatos compatíveis.
@@ -35,4 +35,4 @@ Atualização do Metadados WS
    Motor: ExifTool 13.64, de Phil Harvey; consulte https://exiftool.org/ para os termos e avisos do projeto original.
    Uso: leitura e gravação de metadados EXIF, IPTC, XMP, GPS e outros grupos reconhecidos pelo ExifTool em arquivos compatíveis.
 
-Os dois motores são carregados sob demanda por CDN. O processamento dos arquivos selecionados ocorre no navegador; os arquivos não são enviados para os provedores das bibliotecas.
+O TagLib-TS 0.1.5 é carregado sob demanda por esm.sh, com fallback para jsDelivr. O ExifTool-WASM 1.0.9 é carregado por esm.sh. O processamento dos arquivos selecionados ocorre no navegador; os arquivos não são enviados para os provedores das bibliotecas.

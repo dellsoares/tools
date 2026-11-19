@@ -122,10 +122,16 @@ VALIDAÇÕES DA V9
 
 METADADOS WS — VERSÃO 10
 - Página única: /gerenciador-metadados/index.html (CSS e JavaScript incorporados).
-- Áudio: TagLib-TS 1.2.2, leitura e gravação de tags comuns e avançadas, propriedades técnicas e capa incorporada em formatos compatíveis.
+- Áudio: TagLib-TS 0.1.5, leitura e gravação de tags comuns e avançadas, propriedades técnicas e capa incorporada em formatos compatíveis.
 - Imagens: ExifTool-WASM 1.0.9 / ExifTool 13.64, leitura ampla e edição de campos EXIF, IPTC, XMP, GPS e tags adicionais.
 - Suporta seleção de múltiplos arquivos e aplicação das mesmas alterações aos demais arquivos da fila, com processamento sequencial.
 - A gravação gera uma nova cópia para download e preserva o arquivo original.
 - Os motores são carregados por CDN sob demanda; o conteúdo dos arquivos permanece no navegador.
 - Compatibilidade de escrita depende do formato e da tag. Campos não suportados são sinalizados pela ferramenta.
 - Dependências e licenças resumidas em /assets/THIRD-PARTY-NOTICES.txt.
+
+CORREÇÃO 10.1 — METADADOS WS
+- Corrigida a versão do pacote TagLib-TS para a versão publicada 0.1.5.
+- Carregamento com fallback de esm.sh para jsDelivr.
+- Propriedades de áudio gravadas usando PropertyMap.replace quando disponível.
+- Pacote de correção inclui também a página e os assets do Estúdio de Áudio para reparar instalações que receberam apenas a atualização v10.
