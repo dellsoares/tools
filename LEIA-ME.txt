@@ -1,0 +1,21 @@
+WS TOOLS — VERSÃO 2 (SITE INDEPENDENTE)
+
+Este ZIP já é um site independente, com duas ferramentas reais.
+
+PUBLICAR NO GITHUB PAGES
+1. Crie um repositório dedicado (ex.: ws-tools).
+2. Envie o CONTEÚDO desta pasta para a raiz do repositório (index.html, assets/ e as duas pastas de ferramentas).
+3. Em Settings > Pages, selecione a branch principal e a pasta /(root) para publicar.
+4. O endereço será algo como https://USUARIO.github.io/ws-tools/ (ou https://USUARIO.github.io/ para repositório USUARIO.github.io).
+5. Quando escolher um domínio próprio, ajuste o domínio nas configurações do GitHub Pages; só então inclua canonical e sitemap com os endereços definitivos.
+
+PÁGINAS
+/ — catálogo WS Tools, busca/filtro e abertura das ferramentas em janela integrada.
+/gerador-link-whatsapp/ — gerador de link e QR Code (mantido da primeira versão).
+/contador-caracteres-palavras/ — contagem ao vivo, análise, edição, limites e cópia.
+
+Não há servidor, banco de dados, coleta de textos, cadastro ou API externa obrigatória.
+O QR Code funciona offline graças à biblioteca QR local já incluída.
+A ferramenta do contador também funciona inteiramente no navegador.
+
+Pasta assets/LICENCA-QR.txt: licenças da biblioteca de QR Code.
