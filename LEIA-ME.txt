@@ -1,7 +1,7 @@
-WS TOOLS — VERSÃO 8 · 19/11/2026
+WS TOOLS — VERSÃO 10 · 19/11/2026
 
 ENTREGA
-Site independente e gratuito, com 16 ferramentas reais, páginas próprias, busca, categorias e abertura em modal dentro do catálogo. Logo original de Wendell Soares, fundo escuro inspirado no Scanner WS e link clicável para o criador nos rodapés e no Pomodoro offline.
+Site independente e gratuito, com 18 ferramentas reais, páginas próprias, busca, categorias e abertura em modal dentro do catálogo. Logo original de Wendell Soares, fundo escuro inspirado no Scanner WS e link clicável para o criador nos rodapés e no Pomodoro offline.
 
 FERRAMENTAS
 1. Gerador de link WhatsApp: /gerador-link-whatsapp/
@@ -20,6 +20,8 @@ FERRAMENTAS
 14. Organizador de PDF: /organizador-pdf/
 15. Limpador e formatador de textos: /limpador-textos/
 16. Comparador de textos: /comparador-textos/
+17. Estúdio de Áudio WS: /estudio-audio/
+18. Metadados WS — músicas e imagens: /gerenciador-metadados/
 
 COMO PUBLICAR
 1. Crie um repositório separado, por exemplo dellsoares/ws-tools.
@@ -35,7 +37,7 @@ COMO PUBLICAR
 SEO/GEO
 - Cada ferramenta possui title, meta description, canonical, Open Graph, H1, textos originais, link interno, alt de imagens quando informativas e mini FAQ visível.
 - Schema.org: WebSite, WebPage, BreadcrumbList, SoftwareApplication, FAQPage, ItemList quando relevante.
-- Sitemap contém todas as 17 páginas públicas (início + 16 ferramentas). llms.txt fornece índice textual auxiliar.
+- Sitemap contém todas as 19 páginas públicas (início + 18 ferramentas). llms.txt fornece índice textual auxiliar.
 - robots.txt está preparado para instalação NA RAIZ de domínio próprio. Se a hospedagem for usuario.github.io/ws-tools/, o arquivo ficará dentro da subpasta: não controla robots.txt da origem, que deve ser gerenciado no domínio raiz.
 - Não há garantia de indexação ou posicionamento no Google ou em respostas de IA.
 
@@ -91,9 +93,39 @@ ATUALIZAÇÃO V8 — SETE FERRAMENTAS ADICIONAIS
 - Comparador de textos: comparação linha a linha com destaque de adições e remoções.
 - Cada ferramenta nova tem página própria, canonical, Open Graph, Schema.org, mini FAQ, links internos e limite local de 10 usos/dia.
 - O organizador de PDF carrega PDF.js 3.11.174 e pdf-lib 1.17.1 por CDN. Os documentos são processados localmente; a página exige conexão para obter as bibliotecas.
-- Sitemap, llms.txt, catálogo, ItemList estruturado e perguntas frequentes da página inicial foram atualizados para 16 ferramentas.
+- Sitemap, llms.txt, catálogo, ItemList estruturado e perguntas frequentes da página inicial foram atualizados para 18 ferramentas.
 
 VALIDAÇÕES DA V8
 - Os sete novos scripts passaram na verificação sintática do Node.js.
-- Conferidos os 16 cartões do catálogo, as 16 rotas do modal, as páginas individuais, os links internos, os dados estruturados e as 17 URLs do sitemap.
+- Conferidos os 18 cartões do catálogo, as 18 rotas do modal, as páginas individuais, os links internos, os dados estruturados e as 19 URLs do sitemap.
 - A execução visual e interativa completa no navegador não foi concluída neste ambiente. Após publicar, teste os fluxos de cada ferramenta, principalmente a leitura, a reorganização e a exportação de PDFs com as bibliotecas carregadas via CDN.
+
+
+ATUALIZAÇÃO V9 — ESTÚDIO DE ÁUDIO WS
+- Nova página /estudio-audio/ com três áreas integradas: gravador de voz, editor/limpador e analisador técnico.
+- Gravador: acesso ao microfone com autorização do navegador, seleção de dispositivo, pausa, retomada, indicador de nível e carregamento da gravação no editor.
+- Editor: abrir formatos de áudio compatíveis, corte por início/fim, encurtamento de silêncios, fade in/out, ganho, normalização, equalização, compressor e exportação WAV/MP3/FLAC.
+- Limpeza: classificação automática de ruídos, perfil de ruído por trecho com OMLSA, redução de zumbido 50/60 Hz, RNNoise e DeepFilterNet3 para voz; redução de cliques/estalos.
+- Efeitos: rádio, estúdio, megafone, vinil, telefone, walkie-talkie, eco e auditório.
+- Analisador: duração, formato, canais, taxa de amostragem, pico, RMS, LUFS, clipping, forma de onda e espectro.
+- O áudio é processado no dispositivo. A página carrega audio.js, @audio/denoise e, quando solicitado, @audio/neural-denoise por CDN; os arquivos de áudio não são enviados para os serviços CDN.
+- DeepFilterNet3 baixa um modelo de aproximadamente 8 MB na primeira utilização. RNNoise não exige esse download adicional. Os modelos neurais são destinados principalmente à fala; compare sempre o resultado com o original.
+- O gravador exige navegador compatível com MediaRecorder e permissão de microfone. A disponibilidade de formatos de entrada/saída depende dos decodificadores e codecs carregados.
+- Incluídos avisos de licenças de terceiros em assets/THIRD-PARTY-NOTICES.txt.
+- A ferramenta mantém o limite local de 10 exportações por dia, por navegador. Prévia e análise não consomem uso.
+
+VALIDAÇÕES DA V9
+- Verificação sintática do JavaScript, conferência das rotas, links, catálogo, SEO, FAQ, JSON-LD e sitemap.
+- A execução real de gravação, redução neural, efeitos e exportação depende de teste no GitHub Pages publicado, com conexão para carregar as bibliotecas CDN e permissão do microfone.
+- Testar especialmente o comportamento de DeepFilterNet3 em dispositivos com pouca memória e arquivos longos. A redução neural é voltada à voz e pode modificar sons que não sejam fala.
+
+
+METADADOS WS — VERSÃO 10
+- Página única: /gerenciador-metadados/index.html (CSS e JavaScript incorporados).
+- Áudio: TagLib-TS 1.2.2, leitura e gravação de tags comuns e avançadas, propriedades técnicas e capa incorporada em formatos compatíveis.
+- Imagens: ExifTool-WASM 1.0.9 / ExifTool 13.64, leitura ampla e edição de campos EXIF, IPTC, XMP, GPS e tags adicionais.
+- Suporta seleção de múltiplos arquivos e aplicação das mesmas alterações aos demais arquivos da fila, com processamento sequencial.
+- A gravação gera uma nova cópia para download e preserva o arquivo original.
+- Os motores são carregados por CDN sob demanda; o conteúdo dos arquivos permanece no navegador.
+- Compatibilidade de escrita depende do formato e da tag. Campos não suportados são sinalizados pela ferramenta.
+- Dependências e licenças resumidas em /assets/THIRD-PARTY-NOTICES.txt.

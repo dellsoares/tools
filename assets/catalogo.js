@@ -16,7 +16,9 @@ const tools={
  'verificador-contraste':{url:'./verificador-contraste/?embed=1',title:'Verificador de contraste WCAG'},
  'organizador-pdf':{url:'./organizador-pdf/?embed=1',title:'Organizador de PDF'},
  'limpador-textos':{url:'./limpador-textos/?embed=1',title:'Limpador e formatador de textos'},
- 'comparador-textos':{url:'./comparador-textos/?embed=1',title:'Comparador de textos'}
+ 'comparador-textos':{url:'./comparador-textos/?embed=1',title:'Comparador de textos'},
+ 'estudio-audio':{url:'./estudio-audio/?embed=1',title:'Estúdio de Áudio WS'},
+ 'gerenciador-metadados':{url:'./gerenciador-metadados/?embed=1',title:'Metadados WS — músicas e imagens'}
 };
 const modal=document.getElementById('tool-modal');
 const frame=document.getElementById('tool-iframe');

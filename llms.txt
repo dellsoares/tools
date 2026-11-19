@@ -23,9 +23,13 @@ Website: https://dellsoares.github.io/ws-tools/
 - [Limpador e formatador de textos](https://dellsoares.github.io/ws-tools/limpador-textos/): Remove espaços repetidos, organiza linhas e transforma capitalização de textos.
 - [Comparador de textos](https://dellsoares.github.io/ws-tools/comparador-textos/): Compara duas versões linha por linha e destaca linhas adicionadas, removidas e mantidas.
 
+- [Estúdio de Áudio WS](https://dellsoares.github.io/ws-tools/estudio-audio/): grava pelo microfone, edita e analisa arquivos; reduz ruídos por classificação automática, perfil ou modelos neurais, encurta pausas, aplica fades, equalização, compressão e efeitos de voz. O áudio é processado no navegador.
+
+- [Metadados WS](https://dellsoares.github.io/ws-tools/gerenciador-metadados/): Lê, insere, edita e remove metadados de músicas e imagens; expõe tags de áudio, capas, EXIF, IPTC, XMP e GPS com processamento local.
+
 ## Funcionamento e privacidade
 
 - As ferramentas processam textos, imagens, links e documentos no navegador, sem enviar o conteúdo para processamento remoto.
-- Algumas páginas carregam bibliotecas de terceiros por CDN; o organizador de PDF usa PDF.js e pdf-lib.
+- Algumas páginas carregam bibliotecas de terceiros por CDN; o organizador de PDF usa PDF.js e pdf-lib, e o Estúdio de Áudio carrega o motor audio (audiojs) e módulos de processamento sob demanda.
 - Cada ferramenta aplica um limite local de até 10 usos por dia, por navegador. Esse controle não é um mecanismo de segurança e pode ser reiniciado ao limpar os dados do navegador.
 - Cada ferramenta tem página própria, instruções e perguntas frequentes.

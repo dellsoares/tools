@@ -1,0 +1,38 @@
+WS TOOLS — AVISOS DE LICENÇAS DE TERCEIROS
+Atualização do Estúdio de Áudio WS
+
+O Estúdio de Áudio WS carrega os seguintes projetos de terceiros por CDN, sob demanda. O conteúdo dos arquivos selecionados não é enviado para essas bibliotecas.
+
+1. audio — versão 2.15.1
+   Projeto: https://github.com/audiojs/audio
+   Licença declarada: MIT
+   Uso: decodificação, edição, análise, codificação e composição de áudio.
+
+2. @audio/denoise — versão 0.12.0
+   Projeto: https://github.com/audiojs/denoise
+   Licença declarada: MIT
+   Uso: redução automática de ruído, OMLSA, remoção de zumbido, cliques e estalos.
+
+3. @audio/neural-denoise — versão 0.8.1
+   Projeto: https://github.com/audiojs/neural
+   Licença declarada: BSD-3-Clause AND MIT (componentes/modelos indicados pelo projeto)
+   Uso: RNNoise e DeepFilterNet3 para redução neural de ruído em voz.
+   O modelo DeepFilterNet3 é baixado sob demanda pelo pacote oficial e armazenado em cache pelo navegador, quando permitido.
+
+Este arquivo é um resumo informativo das licenças declaradas pelos projetos. Consulte os repositórios e os arquivos LICENSE/NOTICE de cada dependência para os termos completos e atualizados.
+
+
+Atualização do Metadados WS
+
+4. @dantheman827/taglib-ts — versão 1.2.2
+   Projeto: https://github.com/dantheman827/taglib-ts
+   Licença declarada: LGPL-2.1-or-later
+   Uso: leitura e gravação de tags de áudio, propriedades avançadas e capas em formatos compatíveis.
+
+5. @colorhythm/exiftool-wasm — versão 1.0.9
+   Projeto: https://github.com/colorhythm/exiftool-wasm
+   Licença do wrapper: Apache-2.0
+   Motor: ExifTool 13.64, de Phil Harvey; consulte https://exiftool.org/ para os termos e avisos do projeto original.
+   Uso: leitura e gravação de metadados EXIF, IPTC, XMP, GPS e outros grupos reconhecidos pelo ExifTool em arquivos compatíveis.
+
+Os dois motores são carregados sob demanda por CDN. O processamento dos arquivos selecionados ocorre no navegador; os arquivos não são enviados para os provedores das bibliotecas.
