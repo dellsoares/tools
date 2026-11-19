@@ -5,7 +5,11 @@ const tools={
  'contador-caracteres-palavras':{url:'./contador-caracteres-palavras/?embed=1',title:'Contador de palavras e caracteres'},
  'gerador-qr-code':{url:'./gerador-qr-code/?embed=1',title:'Gerador de QR Code'},
  'timer-pomodoro':{url:'./timer-pomodoro/?embed=1',title:'Timer Pomodoro'},
- 'conversor-imagens':{url:'./conversor-imagens/?embed=1',title:'Conversor de imagens JPG, PNG e WebP'}
+ 'conversor-imagens':{url:'./conversor-imagens/?embed=1',title:'Conversor de imagens JPG, PNG e WebP'},
+ 'extrator-paleta-imagem':{url:'./extrator-paleta-imagem/?embed=1',title:'Extrator de cores de imagem'},
+ 'compressor-imagem':{url:'./compressor-imagem/?embed=1',title:'Compressor de imagens'},
+ 'compressor-pdf':{url:'./compressor-pdf/?embed=1',title:'Compressor de PDF'},
+ 'imagens-para-pdf':{url:'./imagens-para-pdf/?embed=1',title:'Imagens para PDF'}
 };
 const modal=document.getElementById('tool-modal');
 const frame=document.getElementById('tool-iframe');

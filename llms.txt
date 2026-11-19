@@ -1,6 +1,6 @@
 # WS Tools
 
-Portal brasileiro de ferramentas gratuitas, sem cadastro e com processamento local no navegador. Criado por Wendell Soares.
+Portal brasileiro de ferramentas gratuitas, sem cadastro, com até 10 usos por dia e por ferramenta, registrados no navegador. Criado por Wendell Soares.
 
 Website: https://dellsoares.github.io/ws-tools/
 
@@ -15,3 +15,11 @@ Website: https://dellsoares.github.io/ws-tools/
 - [Conversor de imagens JPG, PNG e WebP](https://dellsoares.github.io/ws-tools/conversor-imagens/): converte uma imagem por vez no próprio navegador; ajusta qualidade em JPG/WebP, preenche transparência com branco em JPG e permite download sem envio de fotos.
 
 Cada ferramenta tem instruções e perguntas frequentes em sua própria página. Este arquivo serve como índice textual opcional, sem prometer tratamento especial pelos buscadores.
+
+## Novas ferramentas — v7
+- [Extrator de cores de imagem](https://dellsoares.github.io/ws-tools/extrator-paleta-imagem/): Extraia até 6 cores dominantes de fotos e artes. Copie códigos HEX e RGB com um clique.
+- [Compressor de imagens](https://dellsoares.github.io/ws-tools/compressor-imagem/): Reduza o peso de fotos para sites e redes com controle de qualidade e comparação de tamanho.
+- [Compressor de PDF](https://dellsoares.github.io/ws-tools/compressor-pdf/): Comprima PDFs por rasterização visual em três níveis de qualidade, direto no navegador.
+- [Imagens para PDF](https://dellsoares.github.io/ws-tools/imagens-para-pdf/): Junte várias imagens em um PDF A4, organize a sequência e baixe sem cadastro.
+
+Nota: Compressor de PDF é visual e pode eliminar texto selecionável, links e formulários; requer carregar PDF.js via CDN.

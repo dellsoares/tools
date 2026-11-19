@@ -48,7 +48,9 @@ function complete(){
  if(auto.checked)begin(true);
 }
 function tick(){if(!running)return;remaining=Math.max(0,(endAt-Date.now())/1000);if(remaining<=0){complete();return;}update()}
-function begin(isAutomatic=false){if(running)return;unlockSound();running=true;endAt=Date.now()+remaining*1000;ticker=setInterval(tick,250);update();if(!isAutomatic)announce('Temporizador em andamento.');}
+function begin(isAutomatic=false){if(running)return;
+ if(remaining>=secsFor(phase)-.5){if(!WSUsage.can()){announce('Limite de 10 períodos por dia atingido.');return;}WSUsage.consume();}
+ unlockSound();running=true;endAt=Date.now()+remaining*1000;ticker=setInterval(tick,250);update();if(!isAutomatic)announce('Temporizador em andamento.');}
 function pause(){if(!running)return;remaining=Math.max(0,(endAt-Date.now())/1000);stop();if(remaining<=0){complete();return;}update();announce('Pausado. Você pode retomar quando quiser.');}
 start.addEventListener('click',()=>running?pause():begin());
 byId('pomo-reset').addEventListener('click',()=>setPhase(phase,'Período reiniciado.'));

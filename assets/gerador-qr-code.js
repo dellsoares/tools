@@ -5,7 +5,7 @@ const error=document.getElementById('qr-error'),placeholder=document.getElementB
 let ready=false;
 function reset(){error.hidden=true;output.hidden=true;placeholder.hidden=false;ready=false;}
 function showError(message){error.textContent=message;error.hidden=false;content.focus();}
-function render(){
+function render(countUsage=false){
  error.hidden=true;
  const data=content.value;
  if(!data.trim()){reset();showError('Informe um link ou algum texto para gerar o QR Code.');return;}
@@ -27,10 +27,11 @@ function render(){
       let ex=Math.ceil((x+margin+1)*cell),ey=Math.ceil((y+margin+1)*cell);
       ctx.fillRect(sx,sy,ex-sx,ey-sy);
    }
+   if(countUsage&&!WSUsage.consume())return;
    placeholder.hidden=true;output.hidden=false;meta.textContent=sz+' × '+sz+' px';success.textContent='QR Code gerado com sucesso.';ready=true;
  }catch(e){reset();showError('Não foi possível gerar: o conteúdo é grande demais para um único QR Code. Reduza o texto e tente novamente.');}
 }
-form.addEventListener('submit',e=>{e.preventDefault();render();});
+form.addEventListener('submit',e=>{e.preventDefault();if(!WSUsage.can())return;render(true);});
 content.addEventListener('input',reset);
 sizeEl.addEventListener('change',()=>{if(ready)render();});
 colorEl.addEventListener('input',()=>{colorValue.textContent=colorEl.value.toUpperCase();if(ready)render();});

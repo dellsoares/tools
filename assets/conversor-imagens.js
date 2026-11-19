@@ -38,6 +38,7 @@ function toBlob(canvas,type,q){return new Promise(resolve=>canvas.toBlob(resolve
 form.addEventListener('submit',async e=>{
  e.preventDefault();message('');
  if(!selected||!originalURL){message('Selecione uma imagem primeiro.');return}
+ if(!WSUsage.can())return;
  const ticket=revision;
  submit.disabled=true;submit.textContent='Convertendo…';forgetResult();
  try{
@@ -54,6 +55,7 @@ form.addEventListener('submit',async e=>{
   if(ticket!==revision)return;
   if(!blob)throw Error('A conversão falhou. Experimente uma imagem menor.');
   if(blob.type!==mime)throw Error('Este navegador não oferece exportação para '+sizes[mime].toUpperCase()+'. Tente outro formato ou navegador.');
+  if(!WSUsage.consume())return;
   resultURL=URL.createObjectURL(blob);outImg.src=resultURL;outImg.hidden=false;missing.hidden=true;
   const delta=Math.abs((1-blob.size/selected.size)*100);
   comp.textContent=blob.size<selected.size?`Arquivo ${delta.toFixed(1)}% menor que o original.`:blob.size>selected.size?`Arquivo ${delta.toFixed(1)}% maior que o original.`:'O arquivo ficou do mesmo tamanho.';

@@ -1,70 +1,74 @@
-WS TOOLS — VERSÃO 5 · SITE INDEPENDENTE
+WS TOOLS — VERSÃO 7 · 19/11/2026
 
-FERRAMENTAS DISPONÍVEIS
-1. Gerador de link do WhatsApp: /gerador-link-whatsapp/
-2. Contador de palavras e caracteres: /contador-caracteres-palavras/
+ENTREGA
+Site independente e gratuito, com 9 ferramentas reais, páginas próprias, busca, categorias e abertura em modal dentro do catálogo. Logo original de Wendell Soares, fundo escuro inspirado no Scanner WS e link clicável para o criador nos rodapés e no Pomodoro offline.
+
+FERRAMENTAS
+1. Gerador de link WhatsApp: /gerador-link-whatsapp/
+2. Contador de caracteres e palavras: /contador-caracteres-palavras/
 3. Gerador de QR Code: /gerador-qr-code/
-4. Timer Pomodoro online + widget offline: /timer-pomodoro/
-   Download standalone: /downloads/pomodoro-ws-tools-offline.html
-5. Conversor de imagens JPG, PNG e WebP: /conversor-imagens/
-   Conversão local, uma imagem por vez, formatos JPG/PNG/WebP e qualidade ajustável para JPG/WebP.
+4. Timer Pomodoro e HTML offline: /timer-pomodoro/ e /downloads/pomodoro-ws-tools-offline.html
+5. Conversor JPG, PNG e WebP: /conversor-imagens/
+6. Extrator de paleta de cores: /extrator-paleta-imagem/
+7. Compressor de imagens: /compressor-imagem/
+8. Compressor de PDF visual: /compressor-pdf/
+9. Imagens para PDF: /imagens-para-pdf/
 
-SITE ESTÁTICO
-Suba o CONTEÚDO deste ZIP para a raiz de um repositório novo no GitHub (por exemplo: dellsoares/ws-tools) e ative GitHub Pages em Settings > Pages > Deploy from a branch > main > /(root).
+COMO PUBLICAR
+1. Crie um repositório separado, por exemplo dellsoares/ws-tools.
+2. Envie TODOS os arquivos DE DENTRO deste ZIP para a raiz do repositório.
+3. Ative GitHub Pages: Settings > Pages > Deploy from a branch > main > /(root).
+4. O pacote considera como URL inicial https://dellsoares.github.io/ws-tools/.
+5. Caso sua URL de publicação seja diferente, execute ANTES de publicar:
+      python configurar-seo.py https://SEU-USUARIO.github.io/SEU-REPOSITORIO/
+   Ou para domínio próprio:
+      python configurar-seo.py https://SEU-DOMINIO.com.br/
+6. Confira as páginas e cadastre /sitemap.xml no Google Search Console.
 
-SEO / GEO — O QUE JÁ ESTÁ INCLUÍDO
-- H1 único, metas title e description e conteúdo original em cada página.
-- FAQ com perguntas e respostas visíveis e JSON-LD correspondente (não há promessa de rich results).
-- Dados estruturados WebSite, WebPage, BreadcrumbList, SoftwareApplication e ItemList conforme o tipo de página.
-- Canônicas e Open Graph com URL completa; imagem OG local e descrição da imagem.
-- Links internos entre ferramentas e breadcrumbs. URLs independentes indexáveis mesmo com abertura em modal.
-- sitemap.xml com as 6 páginas e robots.txt.
-- llms.txt opcional com referências textuais. Não constitui garantia de uso por sistemas de IA.
-- Ícones decorativos em SVG com aria-hidden; QR gerado em canvas com rótulo acessível.
+SEO/GEO
+- Cada ferramenta possui title, meta description, canonical, Open Graph, H1, textos originais, link interno, alt de imagens quando informativas e mini FAQ visível.
+- Schema.org: WebSite, WebPage, BreadcrumbList, SoftwareApplication, FAQPage, ItemList quando relevante.
+- Sitemap contém todas as 10 páginas (início + 9 ferramentas). llms.txt fornece índice textual auxiliar.
+- robots.txt está preparado para instalação NA RAIZ de domínio próprio. Se a hospedagem for usuario.github.io/ws-tools/, o arquivo ficará dentro da subpasta: não controla robots.txt da origem, que deve ser gerenciado no domínio raiz.
+- Não há garantia de indexação ou posicionamento no Google ou em respostas de IA.
 
-IMPORTANTE — ENDEREÇO DE PUBLICAÇÃO
-Este pacote está PRÉ-CONFIGURADO para o cenário EXEMPLO:
-  https://dellsoares.github.io/ws-tools/
-Se o nome do repositório, usuário ou domínio mudar, execute ANTES DE PUBLICAR:
-  python configurar-seo.py https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
-Ou, com domínio próprio:
-  python configurar-seo.py https://SEU-DOMINIO.com.br/
-Isso sincroniza canonical, og:url, URL da imagem social, JSON-LD, sitemap.xml, robots.txt e site-url.txt.
+LIMITE DIÁRIO
+- 10 usos por dia POR FERRAMENTA, conforme data de Brasília.
+- Registrado em localStorage do navegador, sem login ou cobrança.
+- WhatsApp: conta cada link gerado; QR: cada geração manual; conversor: cada conversão concluída; contador: cada nova sessão de texto iniciada após limpar; Pomodoro: cada período iniciado do zero; arquivos e imagens: cada processamento bem-sucedido.
+- No Pomodoro offline, o limite vale no armazenamento local disponível para o arquivo.
+- IMPORTANTE: sem autenticação e sem servidor, NÃO é limite de segurança absoluto. Uma pessoa pode contornar apagando armazenamento local, mudando navegador/dispositivo ou modificando o JavaScript. Para bloqueio real, exigiria uma aplicação backend, além de política de privacidade e controles de rate limiting.
+- Com processamento local, cada ação é executada no hardware do visitante, não utiliza cota computacional do seu servidor.
 
-ATENÇÃO SOBRE ROBOTS.TXT NO GITHUB PAGES
-Para projetos em /ws-tools/ de usuario.github.io, o robots.txt dentro da pasta não ocupa o caminho principal /robots.txt da origem e portanto NÃO CONTROLA o rastreamento do domínio github.io. O arquivo fica pronto para uso ao publicar o site na raiz de um domínio próprio. O sitemap.xml no subdiretório continua válido e pode ser enviado ao Google Search Console.
+COMPRESSION DE PDF — ATENÇÃO
+- Implementação da versão 7 é 'compressão visual por rasterização'.
+- Este processo NÃO preserva textos selecionáveis, OCR, links, formulários, tags de acessibilidade, marcações nem assinaturas digitais.
+- A redução de peso não é garantida; PDFs que contêm somente texto ou já otimizados podem crescer.
+- Usa a biblioteca Mozilla PDF.js 4.10.38 via cdnjs.cloudflare.com para leitura do documento. Exige conexão com a CDN ao abrir a ferramenta. O conteúdo do PDF não é enviado a um serviço de compressão.
+- O PDF final é montado localmente pelo WS PDF Builder.
+- Limite de arquivo PDF: 35 MB e 35 páginas; arquivo protegido por senha não é suportado.
+- POR CONTA DAS RESTRIÇÕES DE REDE DO AMBIENTE DE TESTES, a biblioteca externa PDF.js não pôde ser carregada na automação e a integração com PDFs reais ainda precisa ser confirmada no GitHub Pages publicado. O gerador final de PDFs baseado em imagens foi testado e seu arquivo de duas páginas foi aberto em leitor PDF.
 
-PASSOS DE VERIFICAÇÃO QUANDO PUBLICAR
-1. Conferir que as páginas e URLs do sitemap.xml abrem no endereço real.
-2. Conferir canônicas e dados estruturados na página pública.
-3. Enviar sitemap.xml ao Google Search Console (não garante indexação).
-4. Validar páginas indexáveis e testar desempenho em dispositivos móveis.
+IMAGENS PARA PDF
+- Aceita até 20 imagens JPG, PNG ou WebP de até 20 MB cada.
+- Miniaturas com botões para reordenar e remover antes de converter.
+- PDF A4 com margens selecionáveis. Sem OCR. Entrada visual com pixels e sem texto selecionável.
+- Montagem de PDF testada em Chromium (sem rede) e leitura confirmada com PyMuPDF.
 
-O gerador de QR Code é estático: não tem analytics nem edição posterior e não coleta dados; depende da biblioteca local MIT já presente em assets/qr-local.js (licença em LICENCA-QR.txt). A ferramenta permite QR de URL, texto, configuração Wi-Fi já formatada e Pix Copia e Cola completo, mas não cria cobranças Pix.
+EXTRATOR DE CORES E COMPRESSOR DE IMAGENS
+- Processam arquivos inteiramente no navegador usando Canvas.
+- Extrator: amostragem, quantização de cor e seleção de até 6 tons distintos, com HEX e RGB.
+- Compressor: saída JPEG (fundo branco) ou WebP (permite transparência), escolha qualidade/largura, prévia e comparação de peso.
+- Cada processamento concluído conta um uso da ferramenta.
 
-POMODORO NO COMPUTADOR, SEM INTERNET
-- Baixe downloads/pomodoro-ws-tools-offline.html ou acesse a ferramenta e clique no botão de download.
-- Abra o arquivo com dois cliques no Chrome, Edge, Firefox ou outro navegador moderno; não precisa executar instalador.
-- O widget cabe em uma janela pequena, com foco, pausas, tarefas opcionais, aviso sonoro e tempos personalizados.
-- Mantenha a janela aberta (pode ficar minimizada). Sons podem ser bloqueados por políticas do navegador ou economia de energia.
-- O timer usa a hora do dispositivo para resistir à desaceleração de abas em segundo plano.
-- Se fechar o arquivo, o timer para: não é aplicativo de bandeja ou serviço residente.
-- Arquivo 100% independente: CSS e JavaScript embutidos, sem API e sem internet.
+VALIDAÇÕES
+- Verificações sintáticas Node.js dos scripts; dados estruturados e FAQ verificados.
+- Testes em Chromium com documentos HTML incorporados: geração de paleta, compressão de imagem, montagem e download de PDF e layout responsivo nas quatro novas ferramentas.
+- Teste técnico do PDF criado: 2 páginas em formato A4 com imagens embutidas, confirmado em PyMuPDF.
+- O compressor de PDF possui lógica implementada, mas requer teste com a biblioteca PDF.js online quando o site for publicado.
 
-MANUTENÇÃO: o timer online usa assets/pomodoro.css e assets/pomodoro.js.
-O HTML offline contém cópias embutidas desses recursos. Se alterar a lógica/estilo no futuro, regenere também o arquivo offline para mantê-los sincronizados.
-
-CONVERSOR DE IMAGENS
-- A imagem é processada no navegador; não é enviada a servidor.
-- Entrada depende dos formatos decodificáveis pelo navegador; saída JPG, PNG e WebP.
-- Limite por arquivo: 30 MB e 36 megapixels.
-- JPEG substitui transparência por branco; GIF animado vira imagem estática; metadados podem ser perdidos.
-- Os arquivos não são guardados pelo WS Tools.
-
-
-IDENTIDADE PADRÃO WS TOOLS — VERSÃO 6
-- Marca: utilizar sempre assets/logo-wendell.webp (logo original de Wendell Soares).
-- Tema: assets/scanner-theme.css DEPOIS dos estilos das ferramentas. Manter fundo escuro também nos widgets offline.
-- Offline: incorporar a mesma logo em base64 e exibir, abaixo do widget, o link clicável https://wendellsoares.jor.br/. Arquivos offline devem ser autossuficientes.
-- SEO/GEO: mini FAQ real, metadados, schema, alt e links internos. Revisar sitemap.xml e robots.txt ao incluir ferramentas.
-- Canonical e sitemap estão preparados para dellsoares.github.io/ws-tools/. Reconfigurar para domínio definitivo antes da publicação caso diferente.
+PERMANECEM APLICÁVEIS ÀS PRÓXIMAS ATUALIZAÇÕES:
+- Estilo Scanner WS azul-marinho/azul/dourado, nunca fundo branco na interface principal.
+- Logo original no catálogo, ferramentas e widgets baixáveis, crédito clicável wendellsoares.jor.br.
+- SEO/GEO, FAQ, sitemap e robots atualizados em toda versão.
+- Limite de 10 usos/dia por ferramenta, gratuito.

@@ -39,7 +39,12 @@ function count(){
   row.classList.toggle('is-over',chars>max);
  });
 }
-field.addEventListener('input',()=>{status.textContent='';count()});
+let countedBlock=false;
+field.addEventListener('input',()=>{
+ if(!field.value.trim()){countedBlock=false;status.textContent='';count();return;}
+ if(!countedBlock){if(!WSUsage.can()){field.value='';status.textContent='Limite diário atingido. Volte amanhã.';count();return;}WSUsage.consume();countedBlock=true;}
+ status.textContent='';count();
+});
 function sentenceCase(value){
  let capitalize=true;
  return Array.from(value.toLocaleLowerCase('pt-BR')).map(char=>{
@@ -61,7 +66,7 @@ document.querySelectorAll('[data-transform]').forEach(button=>button.addEventLis
  field.value=transforms[button.dataset.transform](before);
  count();status.textContent=before===field.value?'Nenhuma alteração necessária.':'Texto atualizado.';field.focus();
 }));
-document.getElementById('clear-text').addEventListener('click',()=>{field.value='';count();status.textContent='Texto limpo.';field.focus()});
+document.getElementById('clear-text').addEventListener('click',()=>{field.value='';countedBlock=false;count();status.textContent='Texto limpo.';field.focus()});
 async function copyText(value){
  if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value);return}
  const fake=document.createElement('textarea');fake.value=value;fake.readOnly=true;fake.style.position='fixed';fake.style.opacity='0';document.body.appendChild(fake);fake.select();const ok=document.execCommand('copy');fake.remove();if(!ok)throw Error('Cópia não autorizada');
