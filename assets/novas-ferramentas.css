@@ -1,0 +1,100 @@
+/* WS Tools v8 — componentes das sete ferramentas novas */
+.ws-tool-shell{display:grid;gap:18px;max-width:1100px;margin:0 auto}
+.ws-panel{min-width:0}
+.ws-panel-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}
+.ws-panel-head h2{margin:4px 0 0;font-size:1.22rem;letter-spacing:-.025em;color:#f5f9ff}
+.ws-kicker{font-size:.66rem;letter-spacing:.13em;font-weight:850;color:#94c9ff}
+.ws-status-pill{flex:0 0 auto;border:1px solid #42678d;border-radius:30px;padding:6px 10px;color:#b9d6f3;background:#102b4a;font-size:.68rem;font-weight:750}
+.ws-form-grid{display:grid;gap:13px}
+.ws-control{min-width:0;margin:0}
+.ws-control>label{display:block;font-size:.84rem;font-weight:750;color:#e5f1ff;margin:0 0 7px}
+.ws-control small,.ws-control>small{display:block;color:#a9c1db;font-size:.73rem;line-height:1.5;margin-top:6px}
+.ws-tool-input{display:block;width:100%;min-height:45px;background:#0a1d35;color:#e8f5ff;border:1px solid #486783;border-radius:9px;padding:10px 12px;font:inherit;font-size:.88rem}
+textarea.ws-tool-input{min-height:100px;resize:vertical;line-height:1.55}
+.ws-output-code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.78rem;overflow-wrap:anywhere}
+.ws-tool-input:focus{outline:2px solid #83bfff;outline-offset:2px}
+.ws-field-foot{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:5px;color:#a9c1db;font-size:.72rem}
+.ws-field-foot output{font-variant-numeric:tabular-nums;color:#eac875;font-weight:750}
+.ws-inline{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.ws-inline .btn{flex:0 0 auto}
+.ws-outcome{min-height:1.2em;margin:8px 0 0;color:#b9cfe6;font-size:.8rem;line-height:1.5}
+.ws-outcome.success{color:#a2e4c1}
+.ws-outcome.error{color:#ffb6a5}
+.ws-results{display:grid;gap:12px}
+.ws-results[hidden]{display:none!important}
+.ws-badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.ws-badges span{padding:6px 10px;border:1px solid #355474;border-radius:30px;background:#0b203a;color:#c5d9ee;font-size:.75rem}
+.ws-action{margin-top:14px}
+.ws-color-input{width:100%;height:46px;padding:4px;cursor:pointer}
+.meta-search-preview{padding:18px;border-radius:12px;background:#f8fafc;color:#1c2c42;display:grid;gap:6px;max-width:760px}
+.meta-search-preview small{color:#60758e;font-size:.7rem}
+.meta-search-preview strong{font-family:Arial,sans-serif;color:#1a0dab;font-size:1.16rem;font-weight:500;line-height:1.35}
+.meta-search-preview span{font-family:Arial,sans-serif;color:#16804b;font-size:.77rem;overflow-wrap:anywhere}
+.meta-search-preview p{font-family:Arial,sans-serif;color:#4d5156;font-size:.83rem;line-height:1.45;margin:0}
+.meta-social-preview{display:grid;grid-template-columns:minmax(120px,220px) 1fr;gap:14px;align-items:center;margin-top:16px;padding:12px;border:1px solid #365473;border-radius:12px;background:#0a1d35}
+.meta-social-image{min-height:115px;border-radius:8px;background:#1a3655;display:grid;place-items:center;background-position:center;background-size:cover;color:#b4c9df;font-size:.68rem;text-align:center;padding:8px}
+.meta-social-preview small{font-size:.62rem;letter-spacing:.12em;color:#8fbbe5;font-weight:800}
+.meta-social-preview strong{display:block;color:#f3f7ff;font-size:.94rem;margin:5px 0}
+.meta-social-preview p{color:#b8cbe0;font-size:.78rem;line-height:1.45;margin:0}
+.ws-resize-preview{min-height:250px;overflow:hidden;padding:14px}
+.ws-resize-preview img{display:block;max-width:100%;max-height:380px;object-fit:contain}
+.ws-resize-preview span{color:#a9c1db;font-size:.82rem;text-align:center;padding:20px}
+.ws-resize-preview img{box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.ws-resize-preview{background-color:#09182b;background-image:linear-gradient(45deg,#142945 25%,transparent 25%),linear-gradient(-45deg,#142945 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#142945 75%),linear-gradient(-45deg,transparent 75%,#142945 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0}
+.ws-color-pair{display:grid;grid-template-columns:minmax(0,1fr) 56px;gap:9px;align-items:center}
+.ws-color-pair input[type=color]{width:56px;height:45px;border:1px solid #486783;border-radius:9px;background:#0a1d35;padding:4px;cursor:pointer}
+.contrast-sample{display:grid;gap:8px;min-height:180px;padding:25px;border:1px solid #496481;border-radius:12px;align-content:center}
+.contrast-sample strong{font-size:1.35rem}
+.contrast-sample span{font-size:.95rem;line-height:1.55}
+.contrast-sample small{font-size:1.2rem;font-weight:800}
+.contrast-ratio{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:16px;padding:14px 16px;border:1px solid #385777;border-radius:11px;background:#0a1e37;color:#c6d9ee}
+.contrast-ratio strong{font-size:1.55rem;color:#f3cc78;font-variant-numeric:tabular-nums}
+.contrast-checks{display:grid;gap:8px;margin-top:12px}
+.contrast-check-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 12px;border-radius:9px;background:#0b203a;color:#d5e4f5;font-size:.8rem}
+.contrast-check-row b{font-size:.76rem}
+.contrast-check-row b.pass{color:#a0e4bf}
+.contrast-check-row b.fail{color:#ffb49e}
+.pdf-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 12px;color:#d9e8f8;font-size:.82rem;font-weight:750}
+.pdf-toolbar .btn{min-height:38px;padding:8px 12px;font-size:.76rem}
+.pdf-pages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px;margin-top:12px}
+.pdf-page-card{min-width:0;padding:10px;border:1px solid #355474;border-radius:11px;background:#0a1d35}
+.pdf-page-thumb{height:165px;display:grid;place-items:center;overflow:hidden;border-radius:7px;background:#172d48;color:#b5cbe2;font-size:.7rem}
+.pdf-page-thumb img{display:block;max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 4px 14px rgba(0,0,0,.22)}
+.pdf-page-info{display:grid;gap:4px;margin:9px 0;min-width:0}
+.pdf-page-info strong{font-size:.72rem;color:#edf5ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pdf-page-info small{font-size:.67rem;color:#a9c1db}
+.pdf-page-actions{display:flex;gap:5px}
+.pdf-page-actions button{flex:1;min-width:0;min-height:34px;border:1px solid #456587;border-radius:7px;background:#163453;color:#e5f1ff;font-weight:800;cursor:pointer}
+.pdf-page-actions button:hover:not(:disabled){background:#24517b;border-color:#83bfff}
+.pdf-page-actions button:disabled{opacity:.3;cursor:not-allowed}
+.ws-large-textarea{min-height:220px!important}
+.ws-clean-actions{display:flex;flex-wrap:wrap;gap:8px}
+.ws-clean-actions .btn{font-size:.76rem;min-height:39px;padding:9px 12px}
+.diff-legend{display:flex;gap:14px;flex-wrap:wrap;color:#b9cde2;font-size:.73rem;margin:12px 0}
+.diff-legend-added{color:#9de4bb}.diff-legend-removed{color:#ffb39d}
+.diff-badge-added{color:#a0e8be!important;border-color:#32654f!important}
+.diff-badge-removed{color:#ffb6a1!important;border-color:#71473e!important}
+.diff-output{display:grid;gap:4px;max-height:650px;overflow:auto;padding:10px;border:1px solid #304e6e;border-radius:10px;background:#07172b}
+.diff-line{display:grid;grid-template-columns:20px 36px minmax(0,1fr);gap:8px;align-items:start;padding:5px 7px;border-radius:5px;font-size:.76rem;line-height:1.5}
+.diff-line code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:#dce9f8;white-space:pre-wrap;overflow-wrap:anywhere}
+.diff-mark,.diff-number{color:#819ab6;font-variant-numeric:tabular-nums}
+.diff-line.diff-added{background:rgba(32,117,75,.2);border-left:3px solid #57b985}
+.diff-line.diff-added .diff-mark,.diff-line.diff-added code{color:#a8ebc4}
+.diff-line.diff-removed{background:rgba(150,67,51,.2);border-left:3px solid #cf785f}
+.diff-line.diff-removed .diff-mark,.diff-line.diff-removed code{color:#ffc0ad}
+.diff-line.diff-same{border-left:3px solid transparent}
+@media(max-width:720px){
+ .ws-panel-head{align-items:flex-start}
+ .ws-status-pill{font-size:.62rem;padding:5px 8px}
+ .meta-social-preview{grid-template-columns:1fr}
+ .meta-social-image{min-height:135px}
+ .pdf-pages-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ws-clean-actions .btn{flex:1 1 calc(50% - 8px)}
+}
+@media(max-width:430px){
+ .pdf-pages-grid{grid-template-columns:1fr 1fr;gap:8px}
+ .pdf-page-card{padding:7px}
+ .pdf-page-thumb{height:130px}
+ .pdf-page-actions button{min-height:32px}
+ .ws-panel-head h2{font-size:1.05rem}
+}

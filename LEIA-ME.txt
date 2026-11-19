@@ -1,7 +1,7 @@
-WS TOOLS — VERSÃO 7 · 19/11/2026
+WS TOOLS — VERSÃO 8 · 19/11/2026
 
 ENTREGA
-Site independente e gratuito, com 9 ferramentas reais, páginas próprias, busca, categorias e abertura em modal dentro do catálogo. Logo original de Wendell Soares, fundo escuro inspirado no Scanner WS e link clicável para o criador nos rodapés e no Pomodoro offline.
+Site independente e gratuito, com 16 ferramentas reais, páginas próprias, busca, categorias e abertura em modal dentro do catálogo. Logo original de Wendell Soares, fundo escuro inspirado no Scanner WS e link clicável para o criador nos rodapés e no Pomodoro offline.
 
 FERRAMENTAS
 1. Gerador de link WhatsApp: /gerador-link-whatsapp/
@@ -13,6 +13,13 @@ FERRAMENTAS
 7. Compressor de imagens: /compressor-imagem/
 8. Compressor de PDF visual: /compressor-pdf/
 9. Imagens para PDF: /imagens-para-pdf/
+10. Gerador de links UTM: /gerador-utm/
+11. Gerador de Meta Tags e SEO: /gerador-meta-tags/
+12. Redimensionador para redes sociais: /redimensionador-redes-sociais/
+13. Verificador de contraste WCAG: /verificador-contraste/
+14. Organizador de PDF: /organizador-pdf/
+15. Limpador e formatador de textos: /limpador-textos/
+16. Comparador de textos: /comparador-textos/
 
 COMO PUBLICAR
 1. Crie um repositório separado, por exemplo dellsoares/ws-tools.
@@ -28,7 +35,7 @@ COMO PUBLICAR
 SEO/GEO
 - Cada ferramenta possui title, meta description, canonical, Open Graph, H1, textos originais, link interno, alt de imagens quando informativas e mini FAQ visível.
 - Schema.org: WebSite, WebPage, BreadcrumbList, SoftwareApplication, FAQPage, ItemList quando relevante.
-- Sitemap contém todas as 10 páginas (início + 9 ferramentas). llms.txt fornece índice textual auxiliar.
+- Sitemap contém todas as 17 páginas públicas (início + 16 ferramentas). llms.txt fornece índice textual auxiliar.
 - robots.txt está preparado para instalação NA RAIZ de domínio próprio. Se a hospedagem for usuario.github.io/ws-tools/, o arquivo ficará dentro da subpasta: não controla robots.txt da origem, que deve ser gerenciado no domínio raiz.
 - Não há garantia de indexação ou posicionamento no Google ou em respostas de IA.
 
@@ -72,3 +79,21 @@ PERMANECEM APLICÁVEIS ÀS PRÓXIMAS ATUALIZAÇÕES:
 - Logo original no catálogo, ferramentas e widgets baixáveis, crédito clicável wendellsoares.jor.br.
 - SEO/GEO, FAQ, sitemap e robots atualizados em toda versão.
 - Limite de 10 usos/dia por ferramenta, gratuito.
+
+
+ATUALIZAÇÃO V8 — SETE FERRAMENTAS ADICIONAIS
+- Gerador UTM: cria parâmetros de campanha preservando parâmetros existentes na URL.
+- Gerador de Meta Tags: gera title, description, canonical, robots, Open Graph e Twitter Cards.
+- Redimensionador: presets para Instagram, Stories/Reels, Facebook, LinkedIn e YouTube; processamento Canvas local.
+- Contraste WCAG: relação de contraste e critérios AA/AAA para texto normal e grande.
+- Organizador de PDF: combina documentos, reordena, gira e remove páginas; mantém texto e elementos das páginas quando suportados pelo PDF de origem.
+- Limpador de textos: transformações selecionáveis com original preservado até a substituição manual.
+- Comparador de textos: comparação linha a linha com destaque de adições e remoções.
+- Cada ferramenta nova tem página própria, canonical, Open Graph, Schema.org, mini FAQ, links internos e limite local de 10 usos/dia.
+- O organizador de PDF carrega PDF.js 3.11.174 e pdf-lib 1.17.1 por CDN. Os documentos são processados localmente; a página exige conexão para obter as bibliotecas.
+- Sitemap, llms.txt, catálogo, ItemList estruturado e perguntas frequentes da página inicial foram atualizados para 16 ferramentas.
+
+VALIDAÇÕES DA V8
+- Os sete novos scripts passaram na verificação sintática do Node.js.
+- Conferidos os 16 cartões do catálogo, as 16 rotas do modal, as páginas individuais, os links internos, os dados estruturados e as 17 URLs do sitemap.
+- A execução visual e interativa completa no navegador não foi concluída neste ambiente. Após publicar, teste os fluxos de cada ferramenta, principalmente a leitura, a reorganização e a exportação de PDFs com as bibliotecas carregadas via CDN.

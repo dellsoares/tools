@@ -1,25 +1,31 @@
 # WS Tools
 
-Portal brasileiro de ferramentas gratuitas, sem cadastro, com até 10 usos por dia e por ferramenta, registrados no navegador. Criado por Wendell Soares.
+Portal brasileiro de ferramentas digitais gratuitas, sem cadastro, com até 10 usos por dia e por ferramenta, registrados localmente no navegador. Criado por Wendell Soares.
 
 Website: https://dellsoares.github.io/ws-tools/
 
 ## Ferramentas
 
-- [Gerador de link do WhatsApp](https://dellsoares.github.io/ws-tools/gerador-link-whatsapp/): cria endereços wa.me com mensagem opcional, cópia do link, teste e QR Code. Não envia mensagens automaticamente.
-- [Contador de palavras e caracteres](https://dellsoares.github.io/ws-tools/contador-caracteres-palavras/): conta palavras, caracteres, frases, parágrafos e linhas e estima tempo de leitura.
-- [Gerador de QR Code](https://dellsoares.github.io/ws-tools/gerador-qr-code/): converte textos, links, dados de Wi-Fi e códigos Pix Copia e Cola completos em QR Code estático, com PNG para download. Não cria cobrança Pix.
+- [Gerador de link WhatsApp](https://dellsoares.github.io/ws-tools/gerador-link-whatsapp/): Cria links wa.me com mensagem opcional, cópia e QR Code. Não envia mensagens automaticamente.
+- [Contador de palavras e caracteres](https://dellsoares.github.io/ws-tools/contador-caracteres-palavras/): Conta palavras, caracteres, frases, parágrafos e linhas e estima tempo de leitura.
+- [Gerador de QR Code](https://dellsoares.github.io/ws-tools/gerador-qr-code/): Gera QR Codes para textos, links, Wi-Fi e Pix Copia e Cola completo.
+- [Timer Pomodoro](https://dellsoares.github.io/ws-tools/timer-pomodoro/): Temporizador de foco e descanso ajustável, com aviso sonoro e widget HTML para uso offline.
+- [Conversor de imagens JPG, PNG e WebP](https://dellsoares.github.io/ws-tools/conversor-imagens/): Converte imagens JPG, PNG e WebP no próprio navegador.
+- [Extrator de cores de imagem](https://dellsoares.github.io/ws-tools/extrator-paleta-imagem/): Extrai cores dominantes de fotos e artes e fornece códigos HEX e RGB.
+- [Compressor de imagens](https://dellsoares.github.io/ws-tools/compressor-imagem/): Reduz o peso de imagens com controle de qualidade e comparação de tamanho.
+- [Compressor de PDF](https://dellsoares.github.io/ws-tools/compressor-pdf/): Reduz visualmente o tamanho de PDFs por rasterização; pode remover texto selecionável, links e formulários.
+- [Imagens para PDF](https://dellsoares.github.io/ws-tools/imagens-para-pdf/): Reúne imagens em um PDF A4 e permite organizar a sequência.
+- [Gerador de links UTM](https://dellsoares.github.io/ws-tools/gerador-utm/): Monta URLs com parâmetros utm_source, utm_medium, utm_campaign e campos opcionais.
+- [Gerador de Meta Tags e SEO](https://dellsoares.github.io/ws-tools/gerador-meta-tags/): Gera title, meta description, canonical, robots, Open Graph e Twitter Cards.
+- [Redimensionador para redes sociais](https://dellsoares.github.io/ws-tools/redimensionador-redes-sociais/): Redimensiona imagens para formatos de Instagram, Stories, Reels, Facebook, LinkedIn e YouTube.
+- [Verificador de contraste WCAG](https://dellsoares.github.io/ws-tools/verificador-contraste/): Calcula contraste de cores e verifica critérios WCAG AA e AAA para texto normal e grande.
+- [Organizador de PDF](https://dellsoares.github.io/ws-tools/organizador-pdf/): Reordena, gira, remove páginas e combina PDFs preservando o conteúdo das páginas; usa PDF.js e pdf-lib via CDN.
+- [Limpador e formatador de textos](https://dellsoares.github.io/ws-tools/limpador-textos/): Remove espaços repetidos, organiza linhas e transforma capitalização de textos.
+- [Comparador de textos](https://dellsoares.github.io/ws-tools/comparador-textos/): Compara duas versões linha por linha e destaca linhas adicionadas, removidas e mantidas.
 
-- [Timer Pomodoro](https://dellsoares.github.io/ws-tools/timer-pomodoro/): temporizador de foco e descanso ajustável, com aviso sonoro e widget HTML gratuito para usar offline. Não continua funcionando depois que a janela é fechada.
+## Funcionamento e privacidade
 
-- [Conversor de imagens JPG, PNG e WebP](https://dellsoares.github.io/ws-tools/conversor-imagens/): converte uma imagem por vez no próprio navegador; ajusta qualidade em JPG/WebP, preenche transparência com branco em JPG e permite download sem envio de fotos.
-
-Cada ferramenta tem instruções e perguntas frequentes em sua própria página. Este arquivo serve como índice textual opcional, sem prometer tratamento especial pelos buscadores.
-
-## Novas ferramentas — v7
-- [Extrator de cores de imagem](https://dellsoares.github.io/ws-tools/extrator-paleta-imagem/): Extraia até 6 cores dominantes de fotos e artes. Copie códigos HEX e RGB com um clique.
-- [Compressor de imagens](https://dellsoares.github.io/ws-tools/compressor-imagem/): Reduza o peso de fotos para sites e redes com controle de qualidade e comparação de tamanho.
-- [Compressor de PDF](https://dellsoares.github.io/ws-tools/compressor-pdf/): Comprima PDFs por rasterização visual em três níveis de qualidade, direto no navegador.
-- [Imagens para PDF](https://dellsoares.github.io/ws-tools/imagens-para-pdf/): Junte várias imagens em um PDF A4, organize a sequência e baixe sem cadastro.
-
-Nota: Compressor de PDF é visual e pode eliminar texto selecionável, links e formulários; requer carregar PDF.js via CDN.
+- As ferramentas processam textos, imagens, links e documentos no navegador, sem enviar o conteúdo para processamento remoto.
+- Algumas páginas carregam bibliotecas de terceiros por CDN; o organizador de PDF usa PDF.js e pdf-lib.
+- Cada ferramenta aplica um limite local de até 10 usos por dia, por navegador. Esse controle não é um mecanismo de segurança e pode ser reiniciado ao limpar os dados do navegador.
+- Cada ferramenta tem página própria, instruções e perguntas frequentes.

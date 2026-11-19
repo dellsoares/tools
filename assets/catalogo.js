@@ -9,7 +9,14 @@ const tools={
  'extrator-paleta-imagem':{url:'./extrator-paleta-imagem/?embed=1',title:'Extrator de cores de imagem'},
  'compressor-imagem':{url:'./compressor-imagem/?embed=1',title:'Compressor de imagens'},
  'compressor-pdf':{url:'./compressor-pdf/?embed=1',title:'Compressor de PDF'},
- 'imagens-para-pdf':{url:'./imagens-para-pdf/?embed=1',title:'Imagens para PDF'}
+ 'imagens-para-pdf':{url:'./imagens-para-pdf/?embed=1',title:'Imagens para PDF'},
+ 'gerador-utm':{url:'./gerador-utm/?embed=1',title:'Gerador de links UTM'},
+ 'gerador-meta-tags':{url:'./gerador-meta-tags/?embed=1',title:'Gerador de Meta Tags e SEO'},
+ 'redimensionador-redes-sociais':{url:'./redimensionador-redes-sociais/?embed=1',title:'Redimensionador para redes sociais'},
+ 'verificador-contraste':{url:'./verificador-contraste/?embed=1',title:'Verificador de contraste WCAG'},
+ 'organizador-pdf':{url:'./organizador-pdf/?embed=1',title:'Organizador de PDF'},
+ 'limpador-textos':{url:'./limpador-textos/?embed=1',title:'Limpador e formatador de textos'},
+ 'comparador-textos':{url:'./comparador-textos/?embed=1',title:'Comparador de textos'}
 };
 const modal=document.getElementById('tool-modal');
 const frame=document.getElementById('tool-iframe');
