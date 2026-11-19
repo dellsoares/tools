@@ -1,0 +1,27 @@
+/* WS Tools — Conversor de imagens */
+.converter-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.converter-dropzone{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;min-height:170px;padding:19px;text-align:center;background:#f5f9fe;border:2px dashed #a5c3e2;border-radius:13px;color:#546d87;cursor:pointer;margin-bottom:8px;transition:.2s background,.2s border-color}
+.converter-dropzone:hover,.converter-dropzone.is-dragging{background:#e9f3ff;border-color:var(--sky)}
+.converter-dropzone strong{color:var(--navy);font-size:1rem}
+.converter-dropzone span:not(.converter-upload-icon){font-size:.82rem}
+.converter-dropzone small{font-size:.73rem;line-height:1.4;color:#627b97}
+.converter-upload-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#e2eefb;color:#226aaf;font-size:1.65rem;font-weight:900}
+.converter-file-input{display:block;width:100%;font-size:.77rem;color:#5d7287;max-width:100%;margin:10px 0 15px}
+.converter-file-input::file-selector-button{font:inherit;font-weight:700;background:#f0f5fb;color:#173f69;border:1px solid #b8d1ea;border-radius:7px;padding:7px 11px;margin-right:10px}
+.converter-source-info{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border:1px solid #d9e4f0;background:#f5f9fc;border-radius:9px;padding:11px 12px;font-size:.78rem;margin:10px 0 20px;color:#50677e}
+#converter-source-name{overflow-wrap:anywhere;font-weight:750;color:var(--navy);max-width:100%}
+.converter-quality-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.converter-quality-head label{margin-bottom:2px}.converter-quality-head output{font-weight:850;color:#2063a3}
+#converter-quality{width:100%;accent-color:#246eae;cursor:pointer}
+#converter-quality:disabled{opacity:.4;cursor:not-allowed}.converter-result{min-width:0}
+.converter-placeholder{display:flex;min-height:285px;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#657a91;gap:10px}
+.converter-placeholder span{font-size:5.5rem;color:#95acc4;line-height:1}.converter-placeholder strong{color:var(--navy)}.converter-placeholder p{font-size:.84rem;max-width:240px}
+.converter-preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.converter-preview-grid figure{margin:0;min-width:0}
+.converter-image-box{height:198px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #d9e5f1;border-radius:11px;padding:10px;background-color:#fff;background-image:linear-gradient(45deg,#eef3f8 25%,transparent 25%),linear-gradient(-45deg,#eef3f8 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#eef3f8 75%),linear-gradient(-45deg,transparent 75%,#eef3f8 75%);background-size:22px 22px;background-position:0 0,0 11px,11px -11px,-11px 0}
+.converter-image-box img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.converter-no-result{color:#58728c;font-size:.77rem;text-align:center;padding:9px;background:rgba(255,255,255,.87);border-radius:6px}
+.converter-preview-grid figcaption{display:flex;justify-content:space-between;gap:5px;align-items:center;font-size:.75rem;color:#5a6f86;padding:9px 3px}.converter-preview-grid figcaption strong{font-weight:800;color:var(--navy)}
+.converter-comparison{text-align:center;color:#28654d;font-size:.86rem;font-weight:750;min-height:1.4em;margin:14px 0}
+.converter-download{width:100%}
+@media(max-width:900px){.converter-layout{grid-template-columns:1fr}}
+@media(max-width:420px){.converter-preview-grid{gap:7px}.converter-image-box{height:150px}.converter-dropzone{min-height:158px}}

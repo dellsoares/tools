@@ -1,9 +1,13 @@
-WS TOOLS — VERSÃO 3 · SITE INDEPENDENTE
+WS TOOLS — VERSÃO 5 · SITE INDEPENDENTE
 
 FERRAMENTAS DISPONÍVEIS
 1. Gerador de link do WhatsApp: /gerador-link-whatsapp/
 2. Contador de palavras e caracteres: /contador-caracteres-palavras/
 3. Gerador de QR Code: /gerador-qr-code/
+4. Timer Pomodoro online + widget offline: /timer-pomodoro/
+   Download standalone: /downloads/pomodoro-ws-tools-offline.html
+5. Conversor de imagens JPG, PNG e WebP: /conversor-imagens/
+   Conversão local, uma imagem por vez, formatos JPG/PNG/WebP e qualidade ajustável para JPG/WebP.
 
 SITE ESTÁTICO
 Suba o CONTEÚDO deste ZIP para a raiz de um repositório novo no GitHub (por exemplo: dellsoares/ws-tools) e ative GitHub Pages em Settings > Pages > Deploy from a branch > main > /(root).
@@ -14,7 +18,7 @@ SEO / GEO — O QUE JÁ ESTÁ INCLUÍDO
 - Dados estruturados WebSite, WebPage, BreadcrumbList, SoftwareApplication e ItemList conforme o tipo de página.
 - Canônicas e Open Graph com URL completa; imagem OG local e descrição da imagem.
 - Links internos entre ferramentas e breadcrumbs. URLs independentes indexáveis mesmo com abertura em modal.
-- sitemap.xml com as 4 páginas e robots.txt.
+- sitemap.xml com as 6 páginas e robots.txt.
 - llms.txt opcional com referências textuais. Não constitui garantia de uso por sistemas de IA.
 - Ícones decorativos em SVG com aria-hidden; QR gerado em canvas com rótulo acessível.
 
@@ -37,3 +41,30 @@ PASSOS DE VERIFICAÇÃO QUANDO PUBLICAR
 4. Validar páginas indexáveis e testar desempenho em dispositivos móveis.
 
 O gerador de QR Code é estático: não tem analytics nem edição posterior e não coleta dados; depende da biblioteca local MIT já presente em assets/qr-local.js (licença em LICENCA-QR.txt). A ferramenta permite QR de URL, texto, configuração Wi-Fi já formatada e Pix Copia e Cola completo, mas não cria cobranças Pix.
+
+POMODORO NO COMPUTADOR, SEM INTERNET
+- Baixe downloads/pomodoro-ws-tools-offline.html ou acesse a ferramenta e clique no botão de download.
+- Abra o arquivo com dois cliques no Chrome, Edge, Firefox ou outro navegador moderno; não precisa executar instalador.
+- O widget cabe em uma janela pequena, com foco, pausas, tarefas opcionais, aviso sonoro e tempos personalizados.
+- Mantenha a janela aberta (pode ficar minimizada). Sons podem ser bloqueados por políticas do navegador ou economia de energia.
+- O timer usa a hora do dispositivo para resistir à desaceleração de abas em segundo plano.
+- Se fechar o arquivo, o timer para: não é aplicativo de bandeja ou serviço residente.
+- Arquivo 100% independente: CSS e JavaScript embutidos, sem API e sem internet.
+
+MANUTENÇÃO: o timer online usa assets/pomodoro.css e assets/pomodoro.js.
+O HTML offline contém cópias embutidas desses recursos. Se alterar a lógica/estilo no futuro, regenere também o arquivo offline para mantê-los sincronizados.
+
+CONVERSOR DE IMAGENS
+- A imagem é processada no navegador; não é enviada a servidor.
+- Entrada depende dos formatos decodificáveis pelo navegador; saída JPG, PNG e WebP.
+- Limite por arquivo: 30 MB e 36 megapixels.
+- JPEG substitui transparência por branco; GIF animado vira imagem estática; metadados podem ser perdidos.
+- Os arquivos não são guardados pelo WS Tools.
+
+
+IDENTIDADE PADRÃO WS TOOLS — VERSÃO 6
+- Marca: utilizar sempre assets/logo-wendell.webp (logo original de Wendell Soares).
+- Tema: assets/scanner-theme.css DEPOIS dos estilos das ferramentas. Manter fundo escuro também nos widgets offline.
+- Offline: incorporar a mesma logo em base64 e exibir, abaixo do widget, o link clicável https://wendellsoares.jor.br/. Arquivos offline devem ser autossuficientes.
+- SEO/GEO: mini FAQ real, metadados, schema, alt e links internos. Revisar sitemap.xml e robots.txt ao incluir ferramentas.
+- Canonical e sitemap estão preparados para dellsoares.github.io/ws-tools/. Reconfigurar para domínio definitivo antes da publicação caso diferente.

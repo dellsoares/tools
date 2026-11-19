@@ -10,4 +10,8 @@ Website: https://dellsoares.github.io/ws-tools/
 - [Contador de palavras e caracteres](https://dellsoares.github.io/ws-tools/contador-caracteres-palavras/): conta palavras, caracteres, frases, parágrafos e linhas e estima tempo de leitura.
 - [Gerador de QR Code](https://dellsoares.github.io/ws-tools/gerador-qr-code/): converte textos, links, dados de Wi-Fi e códigos Pix Copia e Cola completos em QR Code estático, com PNG para download. Não cria cobrança Pix.
 
+- [Timer Pomodoro](https://dellsoares.github.io/ws-tools/timer-pomodoro/): temporizador de foco e descanso ajustável, com aviso sonoro e widget HTML gratuito para usar offline. Não continua funcionando depois que a janela é fechada.
+
+- [Conversor de imagens JPG, PNG e WebP](https://dellsoares.github.io/ws-tools/conversor-imagens/): converte uma imagem por vez no próprio navegador; ajusta qualidade em JPG/WebP, preenche transparência com branco em JPG e permite download sem envio de fotos.
+
 Cada ferramenta tem instruções e perguntas frequentes em sua própria página. Este arquivo serve como índice textual opcional, sem prometer tratamento especial pelos buscadores.

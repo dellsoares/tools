@@ -3,7 +3,9 @@
 const tools={
  'gerador-link-whatsapp':{url:'./gerador-link-whatsapp/?embed=1',title:'Gerador de link do WhatsApp'},
  'contador-caracteres-palavras':{url:'./contador-caracteres-palavras/?embed=1',title:'Contador de palavras e caracteres'},
- 'gerador-qr-code':{url:'./gerador-qr-code/?embed=1',title:'Gerador de QR Code'}
+ 'gerador-qr-code':{url:'./gerador-qr-code/?embed=1',title:'Gerador de QR Code'},
+ 'timer-pomodoro':{url:'./timer-pomodoro/?embed=1',title:'Timer Pomodoro'},
+ 'conversor-imagens':{url:'./conversor-imagens/?embed=1',title:'Conversor de imagens JPG, PNG e WebP'}
 };
 const modal=document.getElementById('tool-modal');
 const frame=document.getElementById('tool-iframe');
