@@ -68,3 +68,9 @@ SEPARADOR DE FAIXAS WS — MODELO DE IA
 - Arquivo utilizado: htdemucs_fp16weights.onnx, aproximadamente 166 MB, obtido do Hugging Face em revisão fixada do repositório.
 - ONNX Runtime Web: Microsoft, licença MIT; carregado sob demanda via jsDelivr.
 - O modelo e a biblioteca são baixados pelo navegador. Os arquivos de áudio selecionados não são enviados ao Hugging Face, jsDelivr ou a qualquer servidor para processamento.
+
+
+WS TOOLS v13 — DADOS DE REFERÊNCIA
+- países-ws.json é uma base derivada de coleções públicas consolidadas por pycountry (ISO 3166), Babel/Unicode CLDR e countryinfo, com revisões manuais para nomes/gentílicos em português. Não é uma fonte oficial única; alguns campos e traduções podem precisar de revisão.
+- World Plugs: a página Tomadas pelo Mundo busca sob demanda um CSV comunitário publicado em https://github.com/benjiao/world-plugs, com dados compilados a partir de informações IEC. Nenhuma cópia do CSV é distribuída com o pacote; em caso de falha, há uma tabela resumida local. A própria ferramenta exibe avisos de verificação elétrica antes de conectar um aparelho.
+- ViaCEP (https://viacep.com.br/): consulta online, via navegador e somente quando solicitada pelo usuário. Dados consultados são transmitidos ao serviço externo ViaCEP para realização da busca.

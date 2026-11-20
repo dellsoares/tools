@@ -20,3 +20,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 @media(max-width:620px){.logo .brand-mark{width:42px;height:42px;flex-basis:42px}.tool-card{min-height:0}.tool-box,.result-box{padding:18px}.hero{padding:55px 0 69px}}
 /* Visibility must take precedence over the themed flex/grid display declarations. */
 [hidden]{display:none!important}
+
+/* WS Tools v13 — unificação visual em todo o catálogo */
+:root{--accent:#f8d379;--gold:#f8d379}
+.nav-contact,.btn-primary{background:#f8d379;color:#09182b}
+.nav-contact:hover,.btn-primary:hover{background:#ffe6a7}
+.tool-box,.result-box,.ws-panel,.explain,.btn,.nav-contact,input,textarea,select{border-radius:10px}
+@media(max-width:620px){.site-nav a:not([aria-current]){display:inline}.site-nav a:nth-child(2){color:#f8d379}.site-nav a:nth-child(n+3){display:none}}

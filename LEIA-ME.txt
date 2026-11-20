@@ -1,3 +1,49 @@
+WS TOOLS — ATUALIZAÇÃO v13 · 19/11/2026
+
+PUBLICAÇÃO — PACOTE INCREMENTAL
+Este ZIP contém SOMENTE os arquivos novos ou modificados pela v13.
+Extraia o conteúdo na RAIZ do repositório existente, mantendo as mesmas pastas.
+Sobrescreva apenas os arquivos com caminhos iguais. NÃO apague os arquivos já existentes.
+Não renomeie arquivos index.html nem coloque os HTML de ferramentas na raiz.
+O endereço de publicação atual é o GitHub Pages; NÃO configuramos ainda o subdomínio tools.wendellsoares.jor.br.
+Quando o subdomínio estiver ligado, atualizar URLs absolutas de canonical, Open Graph, Schema.org, sitemap, robots e llms.
+
+NOVIDADES
+- Página pública /categorias/ com oito categorias, descrição de cada uma, número de ferramentas e 34 links individuais.
+- Catálogo atualizado: busca geral, 34 cartões, cores fixas por categoria, identificação visual por ícones, sem status “Disponível”.
+- Visual mantido em azul-marinho escuro com dourado principal #f8d379; cantos levemente arredondados e navegação para categorias.
+- Dez novas ferramentas:
+  25. Conversor de Medidas: /conversor-medidas/
+  26. Tomadas pelo Mundo: /tomadas-pelo-mundo/
+  27. Contador de Dias: /contador-dias/
+  28. Países do Mundo: /paises-do-mundo/
+  29. Conversor de Cores: /conversor-cores/
+  30. Informações do Dispositivo: /informacoes-dispositivo/
+  31. Sorteador de Números e Nomes: /sorteador-numeros/
+  32. Calculadora de IMC e TMB: /calculadora-imc-tmb/
+  33. Consulta CEP Brasil: /consulta-cep/
+  34. Calculadora de Proporção de Imagem (Aspect Ratio): /calculadora-proporcao-imagem/
+
+DESEMPENHO E DEPENDÊNCIAS
+- A página inicial NÃO carrega as bibliotecas de PDF, imagem, IA, dados de países nem as rotinas das 10 ferramentas novas.
+- Apenas as páginas novas carregam o JS compartilhado v13-tools.js; dados paises-ws.json carregam somente nas páginas Países e Tomadas (~60 KB, antes da compressão HTTP).
+- Consulta CEP depende de internet e da disponibilidade do ViaCEP (viacep.com.br). O CEP ou logradouro pesquisado é enviado diretamente ao ViaCEP para responder à consulta.
+- Tomadas: a interface tem base resumida local e tenta consultar o CSV world-plugs.csv da comunidade (originado de referências IEC) quando a página é aberta; se estiver indisponível, exibe apenas os destinos verificados na base resumida. Fonte: https://github.com/benjiao/world-plugs e https://www.iec.ch/world-plugs.
+- As informações elétricas são orientativas: adaptadores não alteram tensão e padrões podem variar por localidade.
+- Países: base local organizada a partir de pycountry, Babel/CLDR e countryinfo, com 249 países e territórios ISO; gentílicos em português são revisados manualmente e os ausentes são identificados, não inventados.
+- Contador de dias: exclui opcionalmente feriados nacionais fixos do Brasil e permite introduzir feriados locais ou móveis por data; não fornece automaticamente calendário de cada cidade.
+- IMC/TMB: estimativas para adultos, não são diagnóstico clínico nem orientação de dieta.
+- Informações do dispositivo: somente capacidades autorizadas pelo navegador; não identifica IP nem número de série.
+- Números aleatórios: crypto.getRandomValues exige contexto seguro quando aplicável (GitHub Pages em HTTPS).
+- Calculadora de Aspect Ratio calcula as dimensões; não redimensiona a imagem original.
+
+TESTES
+- Verificados 34 cartões e rotas, 8 categorias, 36 URLs do sitemap, Schema.org das novas páginas, sintaxe JS, buscas e filtros.
+- Testado em Chromium: conversão de medida, temperatura, dados, datas, HEX/HSL/HSV/CMYK, IMC/TMB, sorteio, Aspect Ratio, Países e Tomadas com respostas simuladas, CEP com retorno ViaCEP simulado.
+- Serviços e downloads externos não foram validados ao vivo neste ambiente (a rede do navegador de teste não permite navegar em URLs externas).
+
+===== HISTÓRICO ATÉ A v12 (mantido para referência) =====
+
 WS TOOLS — VERSÃO 12 · 19/11/2026
 
 ENTREGA

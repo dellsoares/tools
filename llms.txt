@@ -37,8 +37,21 @@ Website: https://dellsoares.github.io/ws-tools/
 
 ## Funcionamento e privacidade
 
-- As ferramentas processam textos, imagens, links e documentos no navegador, sem enviar o conteúdo para processamento remoto.
+- As ferramentas processam textos, imagens, links e documentos no navegador, sem enviar o conteúdo para processamento remoto. Exceção de consulta online: Consulta CEP envia CEP ou endereço pesquisado diretamente ao serviço externo ViaCEP.
 - O Separador de Faixas WS carrega ONNX Runtime Web e o modelo HT-Demucs (aprox. 166 MB) sob demanda; a música é processada localmente e não é enviada para servidores.
 - Algumas páginas carregam bibliotecas de terceiros por CDN; o organizador de PDF usa PDF.js e pdf-lib, e o Estúdio de Áudio carrega o motor audio (audiojs) e módulos de processamento sob demanda.
 - Cada ferramenta aplica um limite local de até 10 usos por dia, por navegador. Esse controle não é um mecanismo de segurança e pode ser reiniciado ao limpar os dados do navegador.
 - Cada ferramenta tem página própria, instruções e perguntas frequentes.
+
+# WS Tools v13 — ferramentas novas
+- Conversor de Medidas WS: https://dellsoares.github.io/ws-tools/conversor-medidas/
+- Tomadas pelo Mundo WS: https://dellsoares.github.io/ws-tools/tomadas-pelo-mundo/
+- Contador de Dias WS: https://dellsoares.github.io/ws-tools/contador-dias/
+- Países do Mundo WS: https://dellsoares.github.io/ws-tools/paises-do-mundo/
+- Conversor de Cores WS: https://dellsoares.github.io/ws-tools/conversor-cores/
+- Informações do Dispositivo WS: https://dellsoares.github.io/ws-tools/informacoes-dispositivo/
+- Sorteador de Números WS: https://dellsoares.github.io/ws-tools/sorteador-numeros/
+- Calculadora de IMC e TMB WS: https://dellsoares.github.io/ws-tools/calculadora-imc-tmb/
+- Consulta CEP Brasil WS: https://dellsoares.github.io/ws-tools/consulta-cep/
+- Calculadora de Proporção de Imagem WS: https://dellsoares.github.io/ws-tools/calculadora-proporcao-imagem/
+- Categorias: https://dellsoares.github.io/ws-tools/categorias/
