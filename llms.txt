@@ -27,6 +27,14 @@ Website: https://dellsoares.github.io/ws-tools/
 
 - [Metadados WS](https://dellsoares.github.io/ws-tools/gerenciador-metadados/): Lê, insere, edita e remove metadados de músicas e imagens; expõe tags de áudio, capas, EXIF, IPTC, XMP e GPS com processamento local.
 
+
+- [Legendas WS](https://dellsoares.github.io/ws-tools/legendas/): cria e edita legendas SRT/VTT, ajusta tempos e sincroniza falas com mídia local.
+- [OCR PDF WS](https://dellsoares.github.io/ws-tools/ocr-pdf/): reconhece texto em PDFs escaneados e imagens, exporta TXT e PDF pesquisável.
+- [Favicon & PWA WS](https://dellsoares.github.io/ws-tools/favicon-pwa/): gera ícones de site e PWA, manifest e snippet HTML em ZIP.
+- [SVG Studio WS](https://dellsoares.github.io/ws-tools/svg-studio/): valida, sanitiza, otimiza e converte SVG para PNG.
+- [SEO Técnico WS](https://dellsoares.github.io/ws-tools/seo-tecnico/): gera e valida sitemap.xml e robots.txt.
+- [Separador de Voz WS](https://dellsoares.github.io/ws-tools/separador-voz/): reduz sons centralizados em áudio estéreo pelo método M/S, sem IA.
+
 ## Funcionamento e privacidade
 
 - As ferramentas processam textos, imagens, links e documentos no navegador, sem enviar o conteúdo para processamento remoto.

@@ -1,7 +1,7 @@
-WS TOOLS — VERSÃO 10 · 19/11/2026
+WS TOOLS — VERSÃO 11 · 19/11/2026
 
 ENTREGA
-Site independente e gratuito, com 18 ferramentas reais, páginas próprias, busca, categorias e abertura em modal dentro do catálogo. Logo original de Wendell Soares, fundo escuro inspirado no Scanner WS e link clicável para o criador nos rodapés e no Pomodoro offline.
+Site independente e gratuito, com 24 ferramentas reais, páginas próprias, busca, categorias e abertura em modal dentro do catálogo. Logo original de Wendell Soares, fundo escuro inspirado no Scanner WS e link clicável para o criador nos rodapés e no Pomodoro offline.
 
 FERRAMENTAS
 1. Gerador de link WhatsApp: /gerador-link-whatsapp/
@@ -37,7 +37,7 @@ COMO PUBLICAR
 SEO/GEO
 - Cada ferramenta possui title, meta description, canonical, Open Graph, H1, textos originais, link interno, alt de imagens quando informativas e mini FAQ visível.
 - Schema.org: WebSite, WebPage, BreadcrumbList, SoftwareApplication, FAQPage, ItemList quando relevante.
-- Sitemap contém todas as 19 páginas públicas (início + 18 ferramentas). llms.txt fornece índice textual auxiliar.
+- Sitemap contém todas as 25 páginas públicas (início + 24 ferramentas). llms.txt fornece índice textual auxiliar.
 - robots.txt está preparado para instalação NA RAIZ de domínio próprio. Se a hospedagem for usuario.github.io/ws-tools/, o arquivo ficará dentro da subpasta: não controla robots.txt da origem, que deve ser gerenciado no domínio raiz.
 - Não há garantia de indexação ou posicionamento no Google ou em respostas de IA.
 
@@ -135,3 +135,22 @@ CORREÇÃO 10.1 — METADADOS WS
 - Carregamento com fallback de esm.sh para jsDelivr.
 - Propriedades de áudio gravadas usando PropertyMap.replace quando disponível.
 - Pacote de correção inclui também a página e os assets do Estúdio de Áudio para reparar instalações que receberam apenas a atualização v10.
+
+
+ATUALIZAÇÃO V11 — SEIS FERRAMENTAS ADICIONAIS
+19. Legendas WS: /legendas/ — importa e exporta SRT/VTT, cria falas, ajusta tempos em lote e pré-visualiza com áudio/vídeo. Não faz transcrição automática.
+20. OCR PDF WS: /ocr-pdf/ — reconhece texto em PDFs escaneados e imagens; exporta TXT e PDF pesquisável com camada de texto invisível. Limite de 25 MB e 15 páginas por PDF.
+21. Favicon & PWA WS: /favicon-pwa/ — gera PNGs 16, 32, 48, 180, 192, 512 e maskable 512; cria manifest.webmanifest, snippet HTML e ZIP.
+22. SVG Studio WS: /svg-studio/ — valida, sanitiza, otimiza, substitui cores/textos e converte SVG para PNG.
+23. SEO Técnico WS: /seo-tecnico/ — gera sitemap.xml e robots.txt, verifica URLs do mesmo domínio e valida estrutura básica dos arquivos.
+24. Separador de Voz WS: /separador-voz/ — método M/S estéreo sem IA; separa centro e laterais, não isola vocal com precisão neural. Requer áudio estéreo.
+
+V11 — DEPENDÊNCIAS E PRIVACIDADE
+- Legendas WS: JavaScript nativo, sem dependências externas.
+- OCR PDF WS: Tesseract.js 5.1.1, PDF.js 3.11.174 e pdf-lib 1.17.1 por CDN; modelos de idioma baixados sob demanda. Documento processado localmente.
+- Favicon & PWA WS: JSZip 3.10.1 por CDN; imagens processadas em Canvas local.
+- SVG Studio WS: APIs nativas do navegador (DOMParser, XMLSerializer e Canvas).
+- SEO Técnico WS: APIs nativas do navegador.
+- Separador de Voz WS: Web Audio API; não baixa modelo e não envia o áudio. Método M/S tem limitações de mixagem e não equivale à separação por IA.
+- Atualizados catálogo, rotas do modal, SEO, Schema.org ItemList, FAQ, sitemap.xml e llms.txt para 24 ferramentas.
+- Limite diário local de 10 usos por ferramenta mantido.

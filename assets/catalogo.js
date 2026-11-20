@@ -18,7 +18,13 @@ const tools={
  'limpador-textos':{url:'./limpador-textos/?embed=1',title:'Limpador e formatador de textos'},
  'comparador-textos':{url:'./comparador-textos/?embed=1',title:'Comparador de textos'},
  'estudio-audio':{url:'./estudio-audio/?embed=1',title:'Estúdio de Áudio WS'},
- 'gerenciador-metadados':{url:'./gerenciador-metadados/?embed=1',title:'Metadados WS — músicas e imagens'}
+ 'gerenciador-metadados':{url:'./gerenciador-metadados/?embed=1',title:'Metadados WS — músicas e imagens'},
+ 'legendas':{url:'./legendas/?embed=1',title:'Legendas WS'},
+ 'ocr-pdf':{url:'./ocr-pdf/?embed=1',title:'OCR PDF WS'},
+ 'favicon-pwa':{url:'./favicon-pwa/?embed=1',title:'Favicon & PWA WS'},
+ 'svg-studio':{url:'./svg-studio/?embed=1',title:'SVG Studio WS'},
+ 'seo-tecnico':{url:'./seo-tecnico/?embed=1',title:'SEO Técnico WS'},
+ 'separador-voz':{url:'./separador-voz/?embed=1',title:'Separador de Voz WS'}
 };
 const modal=document.getElementById('tool-modal');
 const frame=document.getElementById('tool-iframe');

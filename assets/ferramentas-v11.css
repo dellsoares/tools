@@ -1,0 +1,43 @@
+
+.v11-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.v11-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.v11-stack{display:grid;gap:12px}
+.v11-row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.v11-muted{color:#9fb6d0;font-size:.76rem;line-height:1.55}
+.v11-hint{padding:12px 14px;border:1px solid #385777;border-radius:10px;background:#0b2039;color:#c5d8eb;font-size:.78rem;line-height:1.55}
+.v11-hint strong{color:#f2cf81}
+.v11-output{width:100%;min-height:180px;resize:vertical;background:#06152a;color:#dceafa;border:1px solid #385777;border-radius:10px;padding:12px;font: .78rem/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}
+.v11-preview{border:1px solid #385777;border-radius:12px;background:#06152a;padding:14px;min-height:140px;display:grid;place-items:center;overflow:hidden}
+.v11-preview img,.v11-preview svg{max-width:100%;max-height:360px;object-fit:contain}
+.v11-drop{border:1px dashed #54789c;border-radius:12px;background:#0a1d35;padding:18px;text-align:center;color:#bcd1e7}
+.v11-drop input{max-width:100%;margin-top:10px}
+.v11-progress{width:100%;height:9px;border-radius:99px;background:#183451;overflow:hidden}
+.v11-progress>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#3189d8,#e5bd68);transition:width .2s}
+.v11-cue-list{display:grid;gap:9px;max-height:560px;overflow:auto;padding-right:3px}
+.v11-cue{display:grid;grid-template-columns:112px 112px minmax(0,1fr) 34px;gap:7px;align-items:start;padding:10px;border:1px solid #355474;border-radius:10px;background:#0a1d35}
+.v11-cue input,.v11-cue textarea{width:100%;min-width:0;background:#07162b;color:#eaf3ff;border:1px solid #3b5b7a;border-radius:7px;padding:8px;font:inherit;font-size:.76rem}
+.v11-cue textarea{min-height:62px;resize:vertical;line-height:1.45}
+.v11-cue button{border:1px solid #71483f;background:#3a211e;color:#ffd2c6;border-radius:7px;min-height:34px;cursor:pointer}
+.v11-cue.active{border-color:#d8b56b;box-shadow:0 0 0 1px #d8b56b inset}
+.v11-cue-label{display:block;color:#91aac4;font-size:.62rem;margin:0 0 4px}
+.v11-preview-text{min-height:86px;display:grid;place-items:center;text-align:center;padding:14px;border:1px solid #456687;border-radius:10px;background:#07162b;color:#fff;font-size:1.1rem;font-weight:750;line-height:1.45}
+.v11-player{width:100%;margin-top:10px}
+.v11-check-list{display:grid;gap:7px}
+.v11-check{display:flex;gap:8px;align-items:flex-start;color:#c8d9ec;font-size:.78rem;line-height:1.45}
+.v11-check input{margin-top:3px}
+.v11-icon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(115px,1fr));gap:10px}
+.v11-icon-card{padding:10px;border:1px solid #355474;border-radius:10px;background:#0a1d35;text-align:center}
+.v11-icon-card canvas{width:100%;max-width:105px;height:auto;image-rendering:auto;border-radius:8px;background:repeating-conic-gradient(#20364d 0% 25%,#0c1e33 0% 50%) 50%/16px 16px}
+.v11-icon-card small{display:block;color:#b8cce2;font-size:.7rem;margin-top:6px}
+.v11-color-row{display:grid;grid-template-columns:minmax(0,1fr) 54px;gap:8px;align-items:center}
+.v11-color-row input[type=color]{width:54px;height:43px;border:1px solid #486783;border-radius:8px;background:#0a1d35;padding:3px}
+.v11-status-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.v11-status-item{padding:10px;border:1px solid #355474;border-radius:9px;background:#0a1d35;color:#c8d9eb;font-size:.75rem}
+.v11-status-item b{display:block;color:#f0cd80;font-size:.95rem;margin-top:4px}
+.v11-audio-result{display:grid;gap:8px;padding:13px;border:1px solid #355474;border-radius:10px;background:#0a1d35}
+.v11-audio-result h3{margin:0;color:#e8f2ff;font-size:.92rem}
+.v11-audio-result audio{width:100%}
+.v11-small{font-size:.7rem;color:#9fb6d0}
+.v11-inline-note{font-size:.72rem;color:#9fb6d0;line-height:1.5}
+@media(max-width:760px){.v11-grid,.v11-grid-3{grid-template-columns:1fr}.v11-cue{grid-template-columns:1fr 1fr 34px}.v11-cue .cue-text{grid-column:1/3;grid-row:2}.v11-cue button{grid-column:3;grid-row:1}}
+@media(max-width:460px){.v11-cue{grid-template-columns:1fr 1fr 32px;padding:7px}.v11-cue input,.v11-cue textarea{font-size:.7rem;padding:7px}.v11-status-grid{grid-template-columns:1fr 1fr}}
