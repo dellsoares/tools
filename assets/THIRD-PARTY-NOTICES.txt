@@ -74,3 +74,12 @@ WS TOOLS v13 — DADOS DE REFERÊNCIA
 - países-ws.json é uma base derivada de coleções públicas consolidadas por pycountry (ISO 3166), Babel/Unicode CLDR e countryinfo, com revisões manuais para nomes/gentílicos em português. Não é uma fonte oficial única; alguns campos e traduções podem precisar de revisão.
 - World Plugs: a página Tomadas pelo Mundo busca sob demanda um CSV comunitário publicado em https://github.com/benjiao/world-plugs, com dados compilados a partir de informações IEC. Nenhuma cópia do CSV é distribuída com o pacote; em caso de falha, há uma tabela resumida local. A própria ferramenta exibe avisos de verificação elétrica antes de conectar um aparelho.
 - ViaCEP (https://viacep.com.br/): consulta online, via navegador e somente quando solicitada pelo usuário. Dados consultados são transmitidos ao serviço externo ViaCEP para realização da busca.
+
+
+WS TOOLS V14 — DOCUMENTOS E ÁUDIO
+- PDF.js 3.11.174 — Mozilla; Apache License 2.0; carregado sob demanda via CDN para ler/renderizar PDF. https://github.com/mozilla/pdf.js
+- pdf-lib 1.17.1 — MIT; carregado sob demanda via CDN para gerar PDFs. https://github.com/Hopding/pdf-lib
+- JSZip 3.10.1 — MIT; carregado sob demanda via CDN para arquivos EPUB/ZIP. https://github.com/Stuk/jszip
+- PptxGenJS 3.12.0 — MIT; carregado sob demanda via CDN para criar PPTX. https://github.com/gitbrent/PptxGenJS
+- lamejs 1.2.1 — GNU LGPL v3.0; carregado sob demanda via CDN para codificação MP3 no navegador. https://github.com/zhuker/lamejs
+- MediaRecorder, Canvas captureStream e Web Audio são APIs nativas do navegador, sem biblioteca externa.

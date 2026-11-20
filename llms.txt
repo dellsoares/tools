@@ -55,3 +55,16 @@ Website: https://dellsoares.github.io/ws-tools/
 - Consulta CEP Brasil WS: https://dellsoares.github.io/ws-tools/consulta-cep/
 - Calculadora de Proporção de Imagem WS: https://dellsoares.github.io/ws-tools/calculadora-proporcao-imagem/
 - Categorias: https://dellsoares.github.io/ws-tools/categorias/
+
+
+## WS Tools v14 — novas ferramentas
+- Mega Conversor PDF WS: https://dellsoares.github.io/ws-tools/mega-conversor-pdf/ — PDF para PNG/JPG/WebP, PPTX (slides como imagens), EPUB e TXT; imagens e TXT para PDF; PPTX e EPUB para PDF com extração de texto.
+- Compressor de Vídeo WS: https://dellsoares.github.io/ws-tools/compressor-video/ — redimensiona e regrava vídeos localmente em WebM com MediaRecorder; requer codecs compatíveis no navegador.
+- Compressor de Áudio WS: https://dellsoares.github.io/ws-tools/compressor-audio/ — converte áudio decodificável pelo navegador para MP3 com bitrate selecionável.
+- Extrair Áudio de Vídeo WS: https://dellsoares.github.io/ws-tools/extrair-audio-video/ — extrai a faixa sonora de vídeos e gera MP3 localmente.
+
+## Processamento de mídia e privacidade
+- As ferramentas de vídeo usam APIs nativas do navegador (MediaRecorder, Canvas captureStream e Web Audio); o resultado de vídeo é WebM, não MP4. A gravação ocorre em tempo real.
+- As ferramentas de áudio usam Web Audio e MediaRecorder/encoder MP3 carregado sob demanda. O arquivo original não é enviado para servidores.
+- Mega Conversor PDF carrega PDF.js, pdf-lib, JSZip e PptxGenJS sob demanda. Arquivos permanecem no navegador.
+- Instagram URL downloaders não fazem parte desta versão: não há integração gratuita e autorizada com garantia de disponibilidade para baixar mídia por URL sem serviço externo.

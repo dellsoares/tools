@@ -1,13 +1,39 @@
-WS TOOLS — ATUALIZAÇÃO v13 · 19/11/2026
+WS TOOLS — ATUALIZAÇÃO v14 · 19/11/2026
 
 PUBLICAÇÃO — PACOTE INCREMENTAL
-Este ZIP contém SOMENTE os arquivos novos ou modificados pela v13.
-Extraia o conteúdo na RAIZ do repositório existente, mantendo as mesmas pastas.
-Sobrescreva apenas os arquivos com caminhos iguais. NÃO apague os arquivos já existentes.
-Não renomeie arquivos index.html nem coloque os HTML de ferramentas na raiz.
-O endereço de publicação atual é o GitHub Pages; NÃO configuramos ainda o subdomínio tools.wendellsoares.jor.br.
-Quando o subdomínio estiver ligado, atualizar URLs absolutas de canonical, Open Graph, Schema.org, sitemap, robots e llms.
+Este ZIP contém somente os arquivos novos ou modificados pela v14. Extraia o conteúdo na RAIZ do repositório existente, mantendo as mesmas pastas, e sobrescreva os arquivos com caminhos iguais. Não apague os demais arquivos.
+Não renomeie os arquivos index.html nem coloque os HTML das ferramentas na raiz.
+O endereço de publicação continua sendo o GitHub Pages: https://dellsoares.github.io/ws-tools/. O subdomínio tools.wendellsoares.jor.br ainda não foi configurado.
 
+RESUMO DA V14
+- Catálogo atualizado de 34 para 38 ferramentas, mantendo as 8 categorias.
+- Quatro novas ferramentas: Mega Conversor PDF, Compressor de Vídeo, Compressor de Áudio e Extrair Áudio de Vídeo.
+- Página /categorias/ atualizada com 38 links, descrições e quantidades por categoria.
+- Catálogo, busca, rotas do modal, Schema.org ItemList, FAQ, sitemap.xml e llms.txt atualizados.
+- Novos scripts e bibliotecas carregados somente nas páginas que precisam deles; a página inicial não carrega os motores de conversão.
+- Mantida a identidade escura azul-marinho com dourado #f8d379, cantos discretamente arredondados e sem selo “Disponível”.
+
+LIMITES IMPORTANTES
+- Mega Conversor PDF: PDF para PNG/JPG/WebP, PPTX (um slide-imagem por página), EPUB (texto por página) e TXT; imagens/TXT para PDF; PPTX/EPUB para PDF por extração de texto. PDF escaneado precisa de OCR. PPTX/EPUB para PDF não preserva integralmente o layout.
+- Compressor de Vídeo: saída WebM, não MP4; usa codecs do navegador e grava em tempo real. Limite de 250 MB e 15 minutos.
+- Compressor de Áudio: saída MP3 com bitrate selecionável; usa o encoder lamejs carregado sob demanda. Limite de 120 MB e 15 minutos.
+- Extrair Áudio de Vídeo: saída MP3; pode capturar o áudio durante a reprodução se a decodificação direta falhar. Limite de 250 MB e 15 minutos.
+- As duas ferramentas de download por URL do Instagram não foram publicadas: não foi identificada integração gratuita e autorizada que garanta disponibilidade sem serviço externo. Não há scraping, contorno de login nem acesso a conteúdo privado.
+
+PRIVACIDADE E DESEMPENHO
+- Arquivos selecionados permanecem no navegador; bibliotecas são baixadas de CDNs sob demanda.
+- Vídeo usa APIs nativas MediaRecorder, Canvas captureStream e Web Audio.
+- Áudio usa Web Audio e lamejs 1.2.1 (LGPL-3.0), carregado apenas ao iniciar a conversão.
+- Mega Conversor PDF carrega PDF.js 3.11.174, pdf-lib 1.17.1, JSZip 3.10.1 e PptxGenJS 3.12.0 somente quando a conversão correspondente é iniciada.
+- As novas ferramentas mantêm o limite local de 10 usos por dia por navegador.
+
+TESTES REALIZADOS
+- 38 cartões, 38 rotas, 38 itens no Schema.org e 40 URLs no sitemap conferidos.
+- Sintaxe JavaScript, HTML, JSON-LD, caminhos relativos e estrutura do ZIP validados.
+- Chromium: fluxo PDF→TXT e PDF→PPTX/imagem→PDF testados com bibliotecas simuladas; compressão de áudio, extração de áudio e compressão de vídeo testadas com mídia local e encoder MP3 simulado. A gravação WebM foi concluída.
+- As CDNs externas e os codecs disponíveis em outros navegadores/dispositivos ainda precisam de teste no GitHub Pages publicado.
+
+===== HISTÓRICO V13 — CATÁLOGO E DEZ FERRAMENTAS =====
 NOVIDADES
 - Página pública /categorias/ com oito categorias, descrição de cada uma, número de ferramentas e 34 links individuais.
 - Catálogo atualizado: busca geral, 34 cartões, cores fixas por categoria, identificação visual por ícones, sem status “Disponível”.
@@ -41,6 +67,7 @@ TESTES
 - Verificados 34 cartões e rotas, 8 categorias, 36 URLs do sitemap, Schema.org das novas páginas, sintaxe JS, buscas e filtros.
 - Testado em Chromium: conversão de medida, temperatura, dados, datas, HEX/HSL/HSV/CMYK, IMC/TMB, sorteio, Aspect Ratio, Países e Tomadas com respostas simuladas, CEP com retorno ViaCEP simulado.
 - Serviços e downloads externos não foram validados ao vivo neste ambiente (a rede do navegador de teste não permite navegar em URLs externas).
+
 
 ===== HISTÓRICO ATÉ A v12 (mantido para referência) =====
 
@@ -219,3 +246,20 @@ ATUALIZAÇÃO V12 — SEPARADOR DE FAIXAS COM IA
 - A separação por IA pode apresentar resíduos e artefatos; não é isolamento perfeito.
 - A página permite liberar o modelo salvo no armazenamento do site.
 - Catálogo corrigido: as seis ferramentas introduzidas na v11 agora aparecem como cartões na página inicial; ItemList passa a listar 24 ferramentas.
+
+
+ATUALIZAÇÃO V14 — DOCUMENTOS E MÍDIA
+35. Mega Conversor PDF WS: /mega-conversor-pdf/ — PDF para PNG/JPG/WebP, PPTX como slides-imagem, EPUB por texto e TXT; imagens/TXT para PDF; PPTX e EPUB para PDF por extração de texto. Não preserva integralmente layout de PPTX/EPUB ao converter para PDF.
+36. Compressor de Vídeo WS: /compressor-video/ — usa MediaRecorder e Canvas nativos para redimensionar/regravar vídeo em WebM; não exporta MP4 nesta versão; gravação em tempo real; limite 250 MB/15 min.
+37. Compressor de Áudio WS: /compressor-audio/ — decodifica áudio pelo navegador e gera MP3 com bitrate selecionável usando lamejs; limite 120 MB/15 min.
+38. Extrair Áudio de Vídeo WS: /extrair-audio-video/ — extrai faixa de áudio de vídeos para MP3; captura em tempo real quando a decodificação direta não funciona; limite 250 MB/15 min.
+
+V14 — PRIVACIDADE, DESEMPENHO E DEPENDÊNCIAS
+- Os novos scripts são carregados apenas nas páginas correspondentes. A página inicial não carrega PDF.js, pdf-lib, JSZip, PptxGenJS ou lamejs.
+- Mega Conversor PDF carrega PDF.js 3.11.174, pdf-lib 1.17.1, JSZip 3.10.1 e PptxGenJS 3.12.0 sob demanda, somente quando a conversão exige cada biblioteca.
+- Compressor de Vídeo usa APIs nativas MediaRecorder, Canvas captureStream e Web Audio. A saída é WebM (VP9/VP8 e Opus conforme suporte do navegador); não oferece MP4. O processamento ocorre em tempo real e depende de codecs de reprodução do navegador.
+- Compressor de Áudio e Extrair Áudio usam Web Audio e lamejs 1.2.1 (LGPL-3.0), carregado sob demanda. A saída é MP3.
+- Arquivos de entrada permanecem no navegador. As bibliotecas são obtidas de CDNs, não os arquivos de mídia/documentos.
+- PDF para PPTX gera um slide-imagem por página, não slides editáveis. PPTX/EPUB para PDF extrai texto e organiza páginas, sem preservar fielmente imagens, gráficos e diagramação. PDF escaneado requer OCR antes da extração.
+- Os downloaders de imagem/vídeo do Instagram não foram publicados nesta atualização: não há API gratuita e autorizada que garanta download por URL sem depender de serviço externo; não foi implementado scraping, contorno de login ou acesso a conteúdo privado.
+- Catálogo: 38 ferramentas em 8 categorias; utilitários +1 e áudio/vídeo +3. Sitemap e Schema.org atualizados.
