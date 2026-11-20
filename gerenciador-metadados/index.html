@@ -31,7 +31,17 @@ h1{font-size:clamp(2rem,4.6vw,3.35rem);line-height:1.08;letter-spacing:-.055em;m
 .editor{margin-top:22px;border-top:1px solid var(--line);padding-top:20px}.file-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;flex-wrap:wrap}.file-heading h2{margin:0;font-size:1.1rem;overflow-wrap:anywhere}.file-heading p{margin:4px 0 0;color:var(--muted);font-size:.78rem}.file-stats{display:flex;gap:8px;flex-wrap:wrap}.stat{background:rgba(4,15,29,.55);border:1px solid var(--line);padding:7px 10px;border-radius:9px;color:#c6d5e5;font-size:.72rem}.stat b{color:var(--gold)}
 .toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:18px 0 12px}.search{flex:1;min-width:190px;background:#08182c;border:1px solid var(--line);border-radius:9px;color:#fff;padding:10px 12px;font:inherit;font-size:.82rem}.search:focus,.field textarea:focus,.add-grid input:focus{outline:2px solid rgba(84,167,242,.6);border-color:var(--blue)}
 .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.field{min-width:0;border:1px solid rgba(116,148,181,.22);border-radius:11px;background:rgba(4,15,29,.37);padding:11px}.field.removed{border-color:rgba(240,120,120,.55);background:rgba(160,43,43,.11)}.field-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:7px}.field-key{font-size:.72rem;font-weight:850;color:#d7e4f2;overflow-wrap:anywhere}.field textarea{display:block;width:100%;min-height:54px;resize:vertical;border:1px solid #2b4563;border-radius:8px;background:#071629;color:#edf4fb;padding:9px;font:inherit;font-size:.78rem}.field textarea[readonly]{opacity:.65}.field-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:7px}.field-actions small{color:#8298b2;font-size:.67rem}.remove-field{border:0;background:transparent;color:#e99a9a;font-size:.7rem;font-weight:800;cursor:pointer;padding:3px}.field.removed .remove-field{color:#fff}.empty-fields{grid-column:1/-1;color:var(--muted);padding:22px;text-align:center;border:1px dashed var(--line);border-radius:10px;font-size:.83rem}
-.add-panel{margin-top:15px;padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(3,12,25,.3)}.add-panel h3{font-size:.86rem;margin:0 0 10px}.add-grid{display:grid;grid-template-columns:minmax(160px,.7fr) 1.3fr auto;gap:8px}.add-grid input{min-width:0;width:100%;background:#071629;border:1px solid #2b4563;border-radius:8px;color:#fff;padding:10px;font:inherit;font-size:.78rem}
+.add-panel{margin-top:15px;padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(3,12,25,.3)}.add-panel h3{font-size:.86rem;margin:0 0 10px}.add-grid{display:grid;grid-template-columns:minmax(160px,.7fr) 1.3fr auto;gap:8px}
+.preset-grid{display:grid;grid-template-columns:1fr minmax(220px,1.7fr) auto;gap:8px;align-items:center;margin-bottom:13px}
+.preset-grid label{font-size:.75rem;color:#c9d7e6;font-weight:800}
+.preset-grid select{min-width:0;width:100%;background:#071629;border:1px solid #2b4563;border-radius:8px;color:#fff;padding:10px;font:inherit;font-size:.78rem}
+.custom-divider{display:flex;align-items:center;gap:10px;color:#8298b2;font-size:.65rem;font-weight:850;letter-spacing:.1em;margin:12px 0}
+.custom-divider:before,.custom-divider:after{content:"";height:1px;background:var(--line);flex:1}
+.field-key-wrap{display:flex;flex-direction:column;gap:2px;min-width:0}
+.field-tech{font-size:.64rem;color:#8298b2;overflow-wrap:anywhere}
+.field textarea::placeholder{color:#7188a3}
+@media(max-width:720px){.preset-grid{grid-template-columns:1fr}.preset-grid label{margin-bottom:-3px}}
+.add-grid input{min-width:0;width:100%;background:#071629;border:1px solid #2b4563;border-radius:8px;color:#fff;padding:10px;font:inherit;font-size:.78rem}
 .cover-panel{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:15px;padding:13px;border:1px solid var(--line);border-radius:12px;background:rgba(3,12,25,.3)}.cover-preview{width:78px;height:78px;object-fit:cover;border-radius:9px;background:#071629;border:1px solid var(--line)}.cover-info{flex:1;min-width:170px}.cover-info strong{font-size:.82rem}.cover-info p{font-size:.72rem;color:var(--muted);margin:3px 0 0}.cover-actions{display:flex;gap:8px;flex-wrap:wrap}
 .savebar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}.batch-option{display:flex;align-items:flex-start;gap:8px;max-width:520px;color:#c0d0e2;font-size:.77rem}.batch-option input{accent-color:var(--gold);margin-top:3px}.save-actions{display:flex;gap:8px;flex-wrap:wrap}.status{margin-top:14px;padding:11px 13px;border-radius:9px;background:rgba(84,167,242,.1);border:1px solid rgba(84,167,242,.25);color:#c9e2fb;font-size:.78rem}.status.error{background:rgba(160,43,43,.12);border-color:rgba(240,120,120,.35);color:#ffc1c1}.status.success{background:rgba(42,112,102,.13);border-color:rgba(85,201,154,.3);color:#c9e9dd}
 .results{margin-top:14px;display:grid;gap:8px}.result-link{display:flex;justify-content:space-between;gap:10px;align-items:center;border:1px solid rgba(85,201,154,.32);background:rgba(42,112,102,.1);padding:10px 12px;border-radius:9px;text-decoration:none;font-size:.78rem}.result-link b{color:#9ce4c7}
@@ -90,13 +100,19 @@ body.embed .topbar,body.embed .tool-hero,body.embed .guide,body.embed .faq,body.
         </div>
         <div class="fields" id="fields"></div>
         <div class="add-panel" id="add-panel" hidden>
-          <h3>Adicionar metadado personalizado</h3>
-          <div class="add-grid">
-            <input id="new-key" type="text" placeholder="Nome da tag (ex.: XMP-dc:Title)" autocomplete="off">
-            <input id="new-value" type="text" placeholder="Valor (use | para múltiplos valores)" autocomplete="off">
-            <button class="btn" id="add-field" type="button">Adicionar</button>
+          <h3>Adicionar campo pronto para preencher</h3>
+          <div class="preset-grid">
+            <label for="preset-field">Campos principais</label>
+            <select id="preset-field" aria-label="Escolha um campo de metadados"></select>
+            <button class="btn" id="add-preset-field" type="button">＋ Inserir em branco</button>
           </div>
-          <p class="support" id="add-help">Use o nome técnico do campo. A gravação depende do suporte do formato selecionado.</p>
+          <div class="custom-divider">OU INSIRA UMA TAG AVANÇADA</div>
+          <div class="add-grid">
+            <input id="new-key" type="text" placeholder="Nome técnico (ex.: XMP-dc:Title)" autocomplete="off" aria-label="Nome técnico do metadado">
+            <input id="new-value" type="text" placeholder="Valor inicial (opcional)" autocomplete="off" aria-label="Valor inicial opcional">
+            <button class="btn" id="add-field" type="button">Adicionar tag</button>
+          </div>
+          <p class="support" id="add-help">Escolha um campo principal para adicioná-lo vazio e preencher depois. Também é possível criar tags avançadas pelo nome técnico.</p>
         </div>
         <div class="cover-panel" id="cover-panel" hidden>
           <img class="cover-preview" id="cover-preview" alt="Capa incorporada">
@@ -189,9 +205,94 @@ function clearEditor(){
   $('editor').hidden=true;$('fields').replaceChildren();$('file-stats').replaceChildren();$('results').replaceChildren();
   $('cover-panel').hidden=true;$('remove-gps').hidden=true;$('add-panel').hidden=true;
 }
+const musicFieldPresets = [
+  {group:'Identificação',items:[
+    ['Título','TITLE'],['Artista','ARTIST'],['Artista do álbum','ALBUMARTIST'],['Álbum','ALBUM'],
+    ['Gênero','GENRE'],['Ano / data','DATE'],['Número da faixa','TRACKNUMBER'],['Número do disco','DISCNUMBER'],
+    ['Comentário','COMMENT'],['Descrição','DESCRIPTION'],['Subtítulo','SUBTITLE'],['Agrupamento','GROUPING']
+  ]},
+  {group:'Créditos e produção',items:[
+    ['Compositor','COMPOSER'],['Produtor','PRODUCER'],['Gravadora / selo','LABEL'],['Editora / publisher','PUBLISHER'],
+    ['Regente','CONDUCTOR'],['Intérprete','PERFORMER'],['Arranjador','ARRANGER'],['Engenheiro de áudio','ENGINEER'],
+    ['Direitos autorais','COPYRIGHT'],['Idioma','LANGUAGE']
+  ]},
+  {group:'Informações musicais',items:[
+    ['BPM','BPM'],['Tom musical','INITIALKEY'],['Letras','LYRICS'],['ISRC','ISRC'],
+    ['Obra / composição','WORK'],['Mood / atmosfera','MOOD']
+  ]},
+  {group:'Identificadores',items:[
+    ['MusicBrainz — ID da faixa','MUSICBRAINZ_TRACKID'],['MusicBrainz — ID do álbum','MUSICBRAINZ_ALBUMID'],
+    ['MusicBrainz — ID do artista','MUSICBRAINZ_ARTISTID'],['AcoustID','ACOUSTID_ID']
+  ]}
+];
+const imageFieldPresets = [
+  {group:'EXIF — autoria e descrição',items:[
+    ['Autor / fotógrafo','EXIF:Artist'],['Direitos autorais','EXIF:Copyright'],['Descrição da imagem','EXIF:ImageDescription'],
+    ['Comentário do usuário','EXIF:UserComment'],['Data original','EXIF:DateTimeOriginal'],['Data de digitalização','EXIF:DateTimeDigitized']
+  ]},
+  {group:'EXIF — equipamento',items:[
+    ['Fabricante da câmera','EXIF:Make'],['Modelo da câmera','EXIF:Model'],['Modelo da lente','EXIF:LensModel'],
+    ['Software utilizado','EXIF:Software'],['Orientação','EXIF:Orientation']
+  ]},
+  {group:'IPTC — publicação',items:[
+    ['Título / nome do objeto','IPTC:ObjectName'],['Manchete','IPTC:Headline'],['Legenda / descrição','IPTC:Caption-Abstract'],
+    ['Palavras-chave','IPTC:Keywords'],['Autor / crédito','IPTC:By-line'],['Função do autor','IPTC:By-lineTitle'],
+    ['Crédito','IPTC:Credit'],['Fonte','IPTC:Source'],['Aviso de direitos autorais','IPTC:CopyrightNotice'],
+    ['Instruções especiais','IPTC:SpecialInstructions']
+  ]},
+  {group:'IPTC — localização',items:[
+    ['Cidade','IPTC:City'],['Estado / província','IPTC:Province-State'],['País','IPTC:Country-PrimaryLocationName'],
+    ['Data de criação','IPTC:DateCreated']
+  ]},
+  {group:'XMP — descrição e direitos',items:[
+    ['Título XMP','XMP-dc:Title'],['Descrição XMP','XMP-dc:Description'],['Criador / autor XMP','XMP-dc:Creator'],
+    ['Direitos XMP','XMP-dc:Rights'],['Assunto / palavras-chave XMP','XMP-dc:Subject']
+  ]},
+  {group:'XMP — organização',items:[
+    ['Avaliação (0 a 5 estrelas)','XMP-xmp:Rating'],['Rótulo','XMP-xmp:Label'],['Data de criação XMP','XMP-xmp:CreateDate'],
+    ['Crédito editorial','XMP-photoshop:Credit'],['Manchete editorial','XMP-photoshop:Headline'],
+    ['Cidade editorial','XMP-photoshop:City'],['País editorial','XMP-photoshop:Country'],['Instruções editoriais','XMP-photoshop:Instructions']
+  ]},
+  {group:'GPS — localização',items:[
+    ['Latitude GPS','GPS:GPSLatitude'],['Longitude GPS','GPS:GPSLongitude'],['Altitude GPS','GPS:GPSAltitude'],
+    ['Data GPS','GPS:GPSDateStamp'],['Horário GPS','GPS:GPSTimeStamp']
+  ]}
+];
+function populatePresetFields(){
+  const select=$('preset-field');
+  if(!select)return;
+  select.replaceChildren();
+  const first=document.createElement('option');first.value='';first.textContent='Selecione um campo para inserir em branco…';select.appendChild(first);
+  const groups=state.mode==='music'?musicFieldPresets:imageFieldPresets;
+  groups.forEach(group=>{
+    const optgroup=document.createElement('optgroup');optgroup.label=group.group;
+    group.items.forEach(([label,key])=>{
+      const option=document.createElement('option');option.value=key;option.textContent=label+' — '+key;option.dataset.label=label;optgroup.appendChild(option);
+    });
+    select.appendChild(optgroup);
+  });
+}
+function addBlankMetadataField(key,label){
+  if(!key){setStatus('Escolha um campo na lista.','error');return false;}
+  const existing=getRowsFromUI();
+  const found=existing.find(row=>row.key.toLowerCase()===key.toLowerCase());
+  if(found){
+    const card=Array.from($('fields').querySelectorAll('.field')).find(el=>el.dataset.key.toLowerCase()===key.toLowerCase());
+    if(card){card.scrollIntoView({behavior:'smooth',block:'center'});card.querySelector('textarea').focus();}
+    setStatus('Esse campo já existe no arquivo. Você pode editar o valor que está na lista.');
+    return false;
+  }
+  existing.push({key,label:label||key,value:'',isNew:true,readOnly:false});
+  renderFields(existing);
+  const cards=$('fields').querySelectorAll('.field');
+  cards[cards.length-1]?.querySelector('textarea')?.focus();
+  $('field-search').value='';
+  setStatus('Campo inserido em branco. Preencha o valor e depois clique em “Salvar cópia”.','success');
+  return true;
+}
 function setMode(mode){
   if(state.mode===mode)return;
-  state.mode=mode;state.records=[];state.active=-1;
+  state.mode=mode;state.records=[];state.active=-1;populatePresetFields();
   $('mode-music').setAttribute('aria-selected',String(mode==='music'));
   $('mode-image').setAttribute('aria-selected',String(mode==='image'));
   $('file-input').value='';$('queue').replaceChildren();clearEditor();
@@ -229,15 +330,18 @@ function renderFields(rows){
   const box=$('fields');box.replaceChildren();
   if(!rows.length){const empty=document.createElement('div');empty.className='empty-fields';empty.textContent='Nenhum metadado foi encontrado. Use “Adicionar campo” para inserir novas tags.';box.appendChild(empty);return;}
   rows.forEach((row,index)=>{
-    const card=document.createElement('article');card.className='field';card.dataset.key=row.key;card.dataset.original=row.value;card.dataset.new=row.isNew?'1':'0';card.dataset.remove='0';
+    const card=document.createElement('article');card.className='field';card.dataset.key=row.key;card.dataset.label=row.label||'';card.dataset.original=row.value;card.dataset.new=row.isNew?'1':'0';card.dataset.remove=row.remove?'1':'0';if(row.remove)card.classList.add('removed');
     const top=document.createElement('div');top.className='field-top';
-    const key=document.createElement('span');key.className='field-key';key.textContent=row.key;
+    const keyWrap=document.createElement('div');keyWrap.className='field-key-wrap';
+    const key=document.createElement('span');key.className='field-key';key.textContent=row.label||row.key;
+    keyWrap.appendChild(key);
+    if(row.label && row.label!==row.key){const tech=document.createElement('small');tech.className='field-tech';tech.textContent=row.key;keyWrap.appendChild(tech);}
     const badge=document.createElement('small');badge.textContent=row.isNew?'NOVO':'TAG';
-    top.append(key,badge);
-    const area=document.createElement('textarea');area.value=row.value;area.setAttribute('aria-label','Valor de '+row.key);if(row.readOnly)area.readOnly=true;
+    top.append(keyWrap,badge);
+    const area=document.createElement('textarea');area.value=row.value;area.placeholder=row.isNew?'Digite aqui o valor deste campo…':'Sem valor preenchido';area.setAttribute('aria-label','Valor de '+(row.label||row.key));if(row.readOnly)area.readOnly=true;if(row.remove)area.disabled=true;
     const actions=document.createElement('div');actions.className='field-actions';
     const note=document.createElement('small');note.textContent=row.readOnly?'Campo composto / somente leitura':'Uma linha por valor';
-    const remove=document.createElement('button');remove.type='button';remove.className='remove-field';remove.textContent='Marcar para remover';
+    const remove=document.createElement('button');remove.type='button';remove.className='remove-field';remove.textContent=row.remove?'Desfazer remoção':'Marcar para remover';
     remove.addEventListener('click',()=>{
       const removeNow=card.dataset.remove!=='1';card.dataset.remove=removeNow?'1':'0';card.classList.toggle('removed',removeNow);
       remove.textContent=removeNow?'Desfazer remoção':'Marcar para remover';area.disabled=removeNow;
@@ -248,7 +352,7 @@ function renderFields(rows){
 function getRowsFromUI(){
   return Array.from($('fields').querySelectorAll('.field')).map(card=>{
     const area=card.querySelector('textarea');
-    return {key:card.dataset.key,original:card.dataset.original||'',value:area.value,isNew:card.dataset.new==='1',remove:card.dataset.remove==='1',readOnly:area.readOnly};
+    return {key:card.dataset.key,label:card.dataset.label||'',original:card.dataset.original||'',value:area.value,isNew:card.dataset.new==='1',remove:card.dataset.remove==='1',readOnly:area.readOnly};
   });
 }
 function filterRows(){
@@ -256,14 +360,25 @@ function filterRows(){
   $('fields').querySelectorAll('.field').forEach(card=>{card.hidden=!!q&&!card.textContent.toLocaleLowerCase('pt-BR').includes(q)&&!card.querySelector('textarea').value.toLocaleLowerCase('pt-BR').includes(q)});
 }
 $('field-search').addEventListener('input',filterRows);
-$('add-toggle').addEventListener('click',()=>{$('add-panel').hidden=!$('add-panel').hidden;$('new-key').focus()});
+$('add-toggle').addEventListener('click',()=>{
+  $('add-panel').hidden=!$('add-panel').hidden;
+  if(!$('add-panel').hidden){populatePresetFields();$('preset-field').focus();}
+});
+$('add-preset-field').addEventListener('click',()=>{
+  const select=$('preset-field'),option=select.selectedOptions[0];
+  addBlankMetadataField(select.value,option?.dataset.label||option?.textContent.split(' — ')[0]||select.value);
+  select.value='';
+});
 $('add-field').addEventListener('click',()=>{
   const key=$('new-key').value.trim(),value=$('new-value').value;
-  if(!key||!value.trim()){setStatus('Informe o nome da tag e o valor.','error');return;}
-  if(Array.from($('fields').querySelectorAll('.field')).some(x=>x.dataset.key.toLowerCase()===key.toLowerCase())){setStatus('Esse campo já está na lista. Edite a linha existente.','error');return;}
-  const row={key,value:value.split('|').map(x=>x.trim()).filter(Boolean).join('\n'),isNew:true};
-  const existing=getRowsFromUI().map(x=>({key:x.key,value:x.value,isNew:x.isNew,readOnly:x.readOnly}));
-  existing.push(row);renderFields(existing);$('new-key').value='';$('new-value').value='';$('add-panel').hidden=true;setStatus('Campo adicionado. Salve para gravar no arquivo.');
+  if(!key){setStatus('Informe o nome técnico da tag.','error');return;}
+  const added=addBlankMetadataField(key,key);
+  if(added&&value.trim()){
+    const cards=$('fields').querySelectorAll('.field');
+    const card=Array.from(cards).find(el=>el.dataset.key.toLowerCase()===key.toLowerCase());
+    if(card){const area=card.querySelector('textarea');area.value=value.split('|').map(x=>x.trim()).filter(Boolean).join('\n');}
+  }
+  $('new-key').value='';$('new-value').value='';
 });
 $('clear-all').addEventListener('click',()=>{
   if(!confirm('Marcar todos os metadados deste arquivo para remoção? O original será preservado e uma nova cópia será gerada.'))return;
@@ -334,7 +449,7 @@ async function loadMusicRecord(rec){
     const bytes=dataVar?.toByteVector?.().data;
     if(bytes?.length){rec.coverPreviewUrl=URL.createObjectURL(new Blob([bytes],{type:mimeVar?.toString?.()||'image/jpeg'}));rec.coverDescription=descVar?.toString?.()||'Capa incorporada';}
   }
-  $('add-help').textContent='Para campos personalizados, use nomes como ALBUMARTIST, COMPOSER, BPM, ISRC, MUSICBRAINZ_TRACKID, REPLAYGAIN_TRACK_GAIN ou outro campo aceito pelo formato.';
+  $('add-help').textContent='Campos principais aparecem na lista acima. Para tags avançadas, use nomes como ALBUMARTIST, COMPOSER, BPM, ISRC, MUSICBRAINZ_TRACKID ou REPLAYGAIN_TRACK_GAIN.';
 }
 async function loadImageRecord(rec){
   const exif=await loadExifLib();
@@ -350,7 +465,7 @@ async function loadImageRecord(rec){
     ['Tamanho',fmtBytes(rec.file.size)],
     ['Campos',String(rec.rows.length)]
   ]);
-  $('add-help').textContent='Use nomes ExifTool com grupo quando possível: XMP-dc:Title, XMP-dc:Description, IPTC:Keywords, EXIF:Artist, EXIF:Copyright, EXIF:DateTimeOriginal ou GPS:GPSLatitude.';
+  $('add-help').textContent='Campos principais aparecem na lista acima, organizados por EXIF, IPTC, XMP e GPS. Para outros, use o nome técnico ExifTool com grupo.';
 }
 
 function collectChanges(){
@@ -441,6 +556,7 @@ async function saveAll(){
 }
 $('save-button').addEventListener('click',saveAll);
 
+populatePresetFields();
 $('file-input').accept='.mp3,.mp2,.aac,.flac,.m4a,.m4b,.mp4,.aax,.ogg,.oga,.opus,.spx,.wav,.aif,.aiff,.aifc,.mpc,.wv,.ape,.tta,.dsf,.dff,.dsdiff,.wma,.asf,.mka,.mkv,.webm,.mod,.s3m,.xm,.it,.shn';
 document.body.classList.toggle('embed',new URLSearchParams(location.search).get('embed')==='1');
 </script>
