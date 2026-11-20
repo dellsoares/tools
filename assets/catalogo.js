@@ -24,7 +24,7 @@ const tools={
  'favicon-pwa':{url:'./favicon-pwa/?embed=1',title:'Favicon & PWA WS'},
  'svg-studio':{url:'./svg-studio/?embed=1',title:'SVG Studio WS'},
  'seo-tecnico':{url:'./seo-tecnico/?embed=1',title:'SEO Técnico WS'},
- 'separador-voz':{url:'./separador-voz/?embed=1',title:'Separador de Voz WS'}
+ 'separador-voz':{url:'./separador-voz/?embed=1',title:'Separador de Faixas WS'}
 };
 const modal=document.getElementById('tool-modal');
 const frame=document.getElementById('tool-iframe');

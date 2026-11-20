@@ -1,4 +1,4 @@
-WS TOOLS — VERSÃO 11 · 19/11/2026
+WS TOOLS — VERSÃO 12 · 19/11/2026
 
 ENTREGA
 Site independente e gratuito, com 24 ferramentas reais, páginas próprias, busca, categorias e abertura em modal dentro do catálogo. Logo original de Wendell Soares, fundo escuro inspirado no Scanner WS e link clicável para o criador nos rodapés e no Pomodoro offline.
@@ -22,6 +22,12 @@ FERRAMENTAS
 16. Comparador de textos: /comparador-textos/
 17. Estúdio de Áudio WS: /estudio-audio/
 18. Metadados WS — músicas e imagens: /gerenciador-metadados/
+19. Legendas WS: /legendas/
+20. OCR PDF WS: /ocr-pdf/
+21. Favicon & PWA WS: /favicon-pwa/
+22. SVG Studio WS: /svg-studio/
+23. SEO Técnico WS: /seo-tecnico/
+24. Separador de Faixas WS com IA: /separador-voz/
 
 COMO PUBLICAR
 1. Crie um repositório separado, por exemplo dellsoares/ws-tools.
@@ -154,3 +160,16 @@ V11 — DEPENDÊNCIAS E PRIVACIDADE
 - Separador de Voz WS: Web Audio API; não baixa modelo e não envia o áudio. Método M/S tem limitações de mixagem e não equivale à separação por IA.
 - Atualizados catálogo, rotas do modal, SEO, Schema.org ItemList, FAQ, sitemap.xml e llms.txt para 24 ferramentas.
 - Limite diário local de 10 usos por ferramenta mantido.
+
+
+ATUALIZAÇÃO V12 — SEPARADOR DE FAIXAS COM IA
+- Substitui o método simples M/S pelo HT-Demucs executado localmente com ONNX Runtime Web.
+- Gera cinco WAVs: voz, instrumental completo, bateria, baixo e outros instrumentos.
+- O instrumental completo é a soma das saídas bateria + baixo + outros.
+- O modelo ONNX tem aproximadamente 166 MB e é baixado sob demanda; o navegador tenta mantê-lo no Cache Storage.
+- Processamento recomendado em Chrome/Edge desktop com pelo menos 16 GB de RAM.
+- Limite preventivo desta versão: 4 minutos e 80 MB por arquivo.
+- O áudio do usuário permanece no navegador; somente o modelo e a biblioteca ONNX são baixados.
+- A separação por IA pode apresentar resíduos e artefatos; não é isolamento perfeito.
+- A página permite liberar o modelo salvo no armazenamento do site.
+- Catálogo corrigido: as seis ferramentas introduzidas na v11 agora aparecem como cartões na página inicial; ItemList passa a listar 24 ferramentas.

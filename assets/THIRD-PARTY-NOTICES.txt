@@ -60,3 +60,11 @@ ATUALIZAÇÃO V11 — DEPENDÊNCIAS
    Uso: empacotamento de ícones e manifest em ZIP.
 
 As bibliotecas são carregadas sob demanda por CDN. Os arquivos selecionados pelo usuário são processados no navegador e não são enviados aos provedores das bibliotecas. Consulte os projetos originais para os avisos completos.
+
+
+SEPARADOR DE FAIXAS WS — MODELO DE IA
+- HT-Demucs / Demucs: arquitetura e pesos originais associados ao projeto Demucs, de Meta AI Research, licenciados sob MIT.
+- Exportação ONNX do modelo HT-Demucs 4-stem: StemSplitio/htdemucs-onnx, licença MIT.
+- Arquivo utilizado: htdemucs_fp16weights.onnx, aproximadamente 166 MB, obtido do Hugging Face em revisão fixada do repositório.
+- ONNX Runtime Web: Microsoft, licença MIT; carregado sob demanda via jsDelivr.
+- O modelo e a biblioteca são baixados pelo navegador. Os arquivos de áudio selecionados não são enviados ao Hugging Face, jsDelivr ou a qualquer servidor para processamento.

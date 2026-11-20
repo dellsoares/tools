@@ -33,11 +33,12 @@ Website: https://dellsoares.github.io/ws-tools/
 - [Favicon & PWA WS](https://dellsoares.github.io/ws-tools/favicon-pwa/): gera ícones de site e PWA, manifest e snippet HTML em ZIP.
 - [SVG Studio WS](https://dellsoares.github.io/ws-tools/svg-studio/): valida, sanitiza, otimiza e converte SVG para PNG.
 - [SEO Técnico WS](https://dellsoares.github.io/ws-tools/seo-tecnico/): gera e valida sitemap.xml e robots.txt.
-- [Separador de Voz WS](https://dellsoares.github.io/ws-tools/separador-voz/): reduz sons centralizados em áudio estéreo pelo método M/S, sem IA.
+- [Separador de Faixas WS](https://dellsoares.github.io/ws-tools/separador-voz/): usa HT-Demucs com IA no navegador para separar voz, bateria, baixo e outros instrumentos; o modelo de aproximadamente 166 MB é baixado sob demanda.
 
 ## Funcionamento e privacidade
 
 - As ferramentas processam textos, imagens, links e documentos no navegador, sem enviar o conteúdo para processamento remoto.
+- O Separador de Faixas WS carrega ONNX Runtime Web e o modelo HT-Demucs (aprox. 166 MB) sob demanda; a música é processada localmente e não é enviada para servidores.
 - Algumas páginas carregam bibliotecas de terceiros por CDN; o organizador de PDF usa PDF.js e pdf-lib, e o Estúdio de Áudio carrega o motor audio (audiojs) e módulos de processamento sob demanda.
 - Cada ferramenta aplica um limite local de até 10 usos por dia, por navegador. Esse controle não é um mecanismo de segurança e pode ser reiniciado ao limpar os dados do navegador.
 - Cada ferramenta tem página própria, instruções e perguntas frequentes.
