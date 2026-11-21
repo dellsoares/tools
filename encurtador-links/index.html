@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07162f">
+<title>Encurtador de Links Grátis com is.gd | WS Tools</title>
+<meta name="description" content="Encurte links gratuitamente com o is.gd, personalize o endereço depois da barra e copie seu link curto em segundos. Sem cadastro e sem anúncios no WS Tools.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Wendell Soares">
+<link rel="canonical" href="https://dellsoares.github.io/tools/encurtador-links/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="WS Tools">
+<meta property="og:title" content="Encurtador de Links Grátis | WS Tools">
+<meta property="og:description" content="Encurte e personalize URLs com o is.gd sem sair do WS Tools.">
+<meta property="og:url" content="https://dellsoares.github.io/tools/encurtador-links/">
+<meta property="og:image" content="https://dellsoares.github.io/tools/assets/og-ws-tools.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/webp" href="../assets/logo-wendell.webp">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/scanner-theme.css">
+<link rel="stylesheet" href="../assets/v13.css">
+<script>if(new URLSearchParams(location.search).get('embed')==='1')document.documentElement.classList.add('embed');</script>
+<script defer src="../assets/ws-usage.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://dellsoares.github.io/tools/#website","url":"https://dellsoares.github.io/tools/","name":"WS Tools","inLanguage":"pt-BR","creator":{"@id":"https://dellsoares.github.io/tools/#criador"}},{"@type":"WebPage","@id":"https://dellsoares.github.io/tools/encurtador-links/#webpage","url":"https://dellsoares.github.io/tools/encurtador-links/","name":"Encurtador de Links Grátis","inLanguage":"pt-BR","description":"Ferramenta gratuita para encurtar links via is.gd e escolher finais personalizados.","isPartOf":{"@id":"https://dellsoares.github.io/tools/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"WS Tools","item":"https://dellsoares.github.io/tools/"},{"@type":"ListItem","position":2,"name":"Encurtador de Links WS","item":"https://dellsoares.github.io/tools/encurtador-links/"}]},{"@type":"SoftwareApplication","name":"Encurtador de Links WS","operatingSystem":"Web","applicationCategory":"UtilitiesApplication","url":"https://dellsoares.github.io/tools/encurtador-links/","inLanguage":"pt-BR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":0,"priceCurrency":"BRL"},"description":"Encurte e personalize links através da API gratuita do is.gd."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O encurtador de links é gratuito?","acceptedAnswer":{"@type":"Answer","text":"Sim. Você pode criar links curtos pelo WS Tools sem cadastro ou pagamento. A emissão depende da disponibilidade do serviço is.gd."}},{"@type":"Question","name":"Posso personalizar a parte depois de is.gd/?","acceptedAnswer":{"@type":"Answer","text":"Sim. O final personalizado é opcional, precisa ter entre 5 e 30 caracteres e aceitar apenas letras, números e sublinhado. O endereço precisa estar disponível."}},{"@type":"Question","name":"Posso editar um link curto depois de criá-lo?","acceptedAnswer":{"@type":"Answer","text":"Não. Os links do is.gd são permanentes e seu destino não pode ser alterado depois da criação."}},{"@type":"Question","name":"O link original é enviado a algum serviço?","acceptedAnswer":{"@type":"Answer","text":"Sim. O WS Tools envia a URL informada ao serviço externo is.gd para criar e armazenar o link curto. Não envie endereços privados ou que contenham dados sensíveis."}}]},{"@type":"Person","@id":"https://dellsoares.github.io/tools/#criador","name":"Wendell Soares","url":"https://wendellsoares.jor.br/"}]}
+</script>
+<style>
+/* Incremental: only this tool. Retains dark navy / blue / gold WS Tools identity. */
+.isgd-page{background:#070f1d;color:#eaf2fc;min-height:100vh}
+.isgd-page .tool-hero{background:linear-gradient(125deg,#0a1d35,#071221 60%,#111c32);border-bottom:1px solid #2b405a}
+.isgd-page .tool-hero h1{color:#f6f9ff}
+.isgd-page .tool-hero p{color:#b7cadc}
+.isgd-page .tool-hero .eyebrow{color:#f8d379}
+.isgd-page .breadcrumbs{color:#b1c7e3}
+.isgd-page .breadcrumbs a{color:#f8d379}
+.isgd-page .tool-content{background:#070f1d}
+.isgd-grid{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:19px;align-items:stretch}
+.isgd-panel{background:#111e30;border:1px solid #31465f;border-radius:11px;padding:26px;min-width:0}
+.isgd-panel h2{font-size:1.25rem;letter-spacing:-.03em;color:#f7f9ff;margin:5px 0 10px}
+.isgd-kicker{color:#f8d379;font-size:.67rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+.isgd-intro{font-size:.86rem;line-height:1.6;color:#adc1d8;margin-bottom:22px}
+.isgd-field{display:flex;flex-direction:column;gap:7px;margin:0 0 19px}
+.isgd-field label{font-size:.86rem;color:#e4eeff;font-weight:750}
+.isgd-field input,.isgd-url-value{display:block;width:100%;min-height:48px;background:#08192f;border:1px solid #4b617c;color:#f4f9ff;border-radius:8px;padding:12px 13px;font:inherit;outline:0;min-width:0}
+.isgd-field input:focus{border-color:#f8d379;box-shadow:0 0 0 3px rgba(248,211,121,.13)}
+.isgd-field input::placeholder{color:#8fa6c1}
+.isgd-field small{font-size:.75rem;color:#9fb2c9;line-height:1.5}
+.isgd-alias{display:flex;align-items:center;width:100%;border:1px solid #4b617c;border-radius:8px;background:#08192f;overflow:hidden}
+.isgd-alias>span{padding:0 11px;white-space:nowrap;color:#f8d379;font-weight:800;border-right:1px solid #344963;font-size:.9rem}
+.isgd-alias input{border:0;border-radius:0;box-shadow:none!important;flex:1;min-width:0}
+.isgd-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.isgd-actions .btn{border-radius:8px;font-weight:800;min-height:45px}
+.isgd-status{font-size:.82rem;line-height:1.5;margin:14px 0 0;color:#b8d0ea;min-height:1.3em}
+.isgd-status[data-kind=error]{color:#ffb4b4}
+.isgd-status[data-kind=success]{color:#a6efcc}
+.isgd-result{min-height:196px;display:flex;flex-direction:column;justify-content:center;gap:13px}
+.isgd-empty{padding:32px 20px;text-align:center;border:1px dashed #3b5370;border-radius:9px;color:#9eb5cc;line-height:1.65;font-size:.9rem}
+.isgd-empty svg{display:block;margin:0 auto 12px;color:#f8d379}
+.isgd-url-value{font-size:1.13rem;color:#f8d379;font-weight:800;overflow-wrap:anywhere;min-height:auto;text-decoration:none}
+.isgd-url-value:hover{text-decoration:underline}
+.isgd-result-box[hidden],.isgd-empty[hidden]{display:none}
+.isgd-result-box{display:flex;flex-direction:column;gap:14px}
+.isgd-result-actions{display:flex;gap:9px;flex-wrap:wrap}
+.isgd-result-actions button,.isgd-result-actions a{min-height:43px;text-align:center;display:inline-flex;align-items:center;justify-content:center}
+.isgd-result-note{color:#9fb2ca;font-size:.76rem;line-height:1.55}
+.isgd-info{margin-top:19px;padding:20px 23px;background:#111e30;border:1px solid #31465f;border-radius:11px;color:#b9cade;font-size:.85rem;line-height:1.68}
+.isgd-info strong{color:#f6f9ff}
+.isgd-info h2{font-size:1.15rem;color:#fff;margin:0 0 11px}
+.isgd-info details{border-top:1px solid #2a4058;padding:12px 0 4px}
+.isgd-info summary{font-weight:750;color:#e9f2fd;cursor:pointer}
+.isgd-info details p{margin:10px 0 8px}
+.isgd-info a{color:#f8d379}
+@media(max-width:830px){.isgd-grid{grid-template-columns:1fr}.isgd-result{min-height:130px}}
+@media(max-width:540px){.isgd-panel{padding:19px}.isgd-result-actions .btn{flex:1}.isgd-alias>span{font-size:.8rem;padding:0 9px}}
+</style>
+</head>
+<body class="isgd-page">
+<header class="site-header"><div class="container header-inner"><a aria-label="WS Tools — início" class="logo" href="../"><img alt="Logo de Wendell Soares: astronauta azul e dourado" class="brand-mark" width="52" height="52" decoding="async" src="../assets/logo-wendell.webp"><span><strong>WS <em>Tools</em></strong><small>FERRAMENTAS GRATUITAS</small></span></a><nav aria-label="Navegação principal" class="site-nav"><a href="../">Início</a><a href="../categorias/">Categorias</a><a href="../#catalogo">Ferramentas</a></nav><a class="nav-contact" href="https://wendellsoares.jor.br/" target="_blank" rel="noopener noreferrer">Sobre o criador ↗</a></div></header>
+<main id="conteudo">
+<section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Você está aqui"><a href="../">WS Tools</a><span aria-hidden="true"> › </span><span>Encurtador de Links</span></nav><p class="eyebrow">FERRAMENTAS / MARKETING</p><h1>Encurtador de Links WS</h1><p>Transforme URLs longas em links curtos com o is.gd. Personalize o final do endereço e copie o resultado sem sair do WS Tools.</p></div></section>
+<section class="tool-content"><div class="container">
+<div class="isgd-grid">
+<section class="isgd-panel" aria-labelledby="isgd-form-title"><div class="isgd-kicker">01 / CRIAR LINK</div><h2 id="isgd-form-title">Seu link mais curto</h2><p class="isgd-intro">Cole o endereço que deseja encurtar. O campo de personalização é opcional.</p>
+<form id="isgd-form" novalidate>
+<div class="isgd-field"><label for="isgd-original">Link original *</label><input id="isgd-original" type="url" autocomplete="url" inputmode="url" placeholder="https://exemplo.com.br/pagina" required maxlength="5000"><small>Aceita endereços HTTP ou HTTPS. Você também pode colar sem o https://.</small></div>
+<div class="isgd-field"><label for="isgd-custom">Personalizar depois da barra (opcional)</label><div class="isgd-alias"><span aria-hidden="true">is.gd/</span><input id="isgd-custom" type="text" autocomplete="off" spellcheck="false" maxlength="30" placeholder="minha_campanha" aria-describedby="isgd-alias-hint"></div><small id="isgd-alias-hint">De 5 a 30 caracteres: letras, números e _. O nome precisa estar disponível.</small></div>
+<div class="isgd-actions"><button class="btn btn-primary" type="submit" id="isgd-submit">Encurtar link</button><button class="btn btn-outline" type="button" id="isgd-reset">Limpar</button></div>
+<p class="isgd-status" id="isgd-status" role="status" aria-live="polite"></p>
+</form>
+</section>
+<section class="isgd-panel" aria-labelledby="isgd-result-title"><div class="isgd-kicker">02 / RESULTADO</div><h2 id="isgd-result-title">Seu novo endereço</h2><p class="isgd-intro">Pronto para compartilhar em mensagens, redes sociais ou materiais digitais.</p>
+<div class="isgd-result"><div id="isgd-empty" class="isgd-empty"><svg aria-hidden="true" width="35" height="35" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l2-2"/></svg>Seu link curto aparecerá aqui.</div>
+<div id="isgd-result" class="isgd-result-box" hidden><a id="isgd-output" class="isgd-url-value" target="_blank" rel="noopener noreferrer"></a><div class="isgd-result-actions"><button id="isgd-copy" class="btn btn-primary" type="button">Copiar link</button><a id="isgd-open" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Abrir link ↗</a></div><span class="isgd-result-note">O destino do link não poderá ser alterado depois da criação.</span><p class="isgd-status" id="isgd-copy-status" role="status" aria-live="polite"></p></div></div>
+</section>
+</div>
+<div class="isgd-info"><h2>Dúvidas sobre o encurtador de links</h2>
+<details><summary>É gratuito? Preciso criar uma conta?</summary><p>O WS Tools usa a API gratuita do is.gd e não exige cadastro. A criação depende da disponibilidade do serviço, que também aplica limites de uso.</p></details>
+<details><summary>Como personalizar meu link?</summary><p>Digite um final entre 5 e 30 caracteres, usando somente letras, números e sublinhado (_). Exemplo: <strong>is.gd/curso2027</strong>. Se já estiver ocupado, escolha outro.</p></details>
+<details><summary>Posso editar ou excluir o link depois?</summary><p>Não. Segundo as regras do is.gd, o link e seu destino não podem ser alterados ou excluídos depois de criados.</p></details>
+<details><summary>O que acontece com o endereço que eu enviar?</summary><p>Ele é enviado à API do <a href="https://is.gd/" target="_blank" rel="noopener noreferrer">is.gd</a>, que o armazena para criar o redirecionamento. Evite links com informações privadas, senhas ou dados sensíveis. O WS Tools não precisa de conta nem de servidor próprio para isso.</p></details>
+</div>
+<div class="related-tools"><h2>Outras ferramentas gratuitas</h2><p><a href="../gerador-link-whatsapp/">Gerador de link WhatsApp</a> · <a href="../gerador-utm/">Gerador de links UTM</a> · <a href="../gerador-qr-code/">Gerador de QR Code</a> · <a href="../seo-tecnico/">SEO Técnico WS</a></p></div>
+</div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-top"><a aria-label="WS Tools — início" class="logo" href="../"><img class="brand-mark" src="../assets/logo-wendell.webp" alt="Logo de Wendell Soares: astronauta azul e dourado" width="52" height="52" decoding="async"><span><strong>WS <em>Tools</em></strong><small>FERRAMENTAS GRATUITAS</small></span></a><p class="footer-slogan">Ferramentas úteis para tarefas reais.<br><em>Sem complicar.</em></p></div><div class="footer-bottom"><span>Criado por <a href="https://wendellsoares.jor.br/" rel="noopener noreferrer" target="_blank">Wendell Soares</a> · © 2026</span><a href="../categorias/">Categorias ↗</a><a href="../#catalogo">Todas as ferramentas ↗</a></div></div></footer>
+<script>
+(()=>{'use strict';
+const form=document.getElementById('isgd-form');
+const original=document.getElementById('isgd-original');
+const custom=document.getElementById('isgd-custom');
+const submit=document.getElementById('isgd-submit');
+const reset=document.getElementById('isgd-reset');
+const status=document.getElementById('isgd-status');
+const empty=document.getElementById('isgd-empty');
+const result=document.getElementById('isgd-result');
+const output=document.getElementById('isgd-output');
+const open=document.getElementById('isgd-open');
+const copy=document.getElementById('isgd-copy');
+const copyStatus=document.getElementById('isgd-copy-status');
+let busy=false;
+const cache=new Map();
+function inform(msg,kind=''){status.textContent=msg;status.dataset.kind=kind;}
+function hideResult(){empty.hidden=false;result.hidden=true;output.removeAttribute('href');open.removeAttribute('href');copyStatus.textContent='';}
+function showResult(link){empty.hidden=true;result.hidden=false;output.href=link;open.href=link;output.textContent=link;copyStatus.textContent='';}
+function normalizeURL(value){
+ let url=value.trim();if(!url)throw new Error('Informe o link original.');
+ if(!/^https?:\/\//i.test(url))url='https://'+url;
+ if(url.length>5000)throw new Error('O link original pode ter no máximo 5.000 caracteres.');
+ let parsed;try{parsed=new URL(url);}catch{throw new Error('O endereço informado não é válido. Confira o link.');}
+ if(!['http:','https:'].includes(parsed.protocol)||!parsed.hostname||!parsed.hostname.includes('.')||parsed.username||parsed.password)throw new Error('Digite um endereço válido começando com http:// ou https://.');
+ return parsed.href;
+}
+function getError(data){
+ switch(Number(data.errorcode)){
+  case 1:return 'O is.gd não aceitou o endereço original. Confira se ele está correto e acessível.';
+  case 2:return 'Esse final personalizado está indisponível ou é inválido. Experimente outro.';
+  case 3:return 'O is.gd atingiu o limite temporário de solicitações. Tente novamente mais tarde.';
+  default:return 'O is.gd não conseguiu criar o link agora. Tente novamente mais tarde.';
+ }
+}
+form.addEventListener('submit',async e=>{
+ e.preventDefault();if(busy)return;
+ inform('');let destination,alias;
+ try{
+  destination=normalizeURL(original.value);alias=custom.value.trim();
+  if(alias&&!/^[A-Za-z0-9_]{5,30}$/.test(alias)){custom.focus();throw new Error('O final personalizado precisa ter de 5 a 30 letras, números ou _.');}
+ }catch(err){inform(err.message,'error');return;}
+ const key=JSON.stringify([destination,alias]);
+ if(cache.has(key)){showResult(cache.get(key));inform('Seu link já foi criado nesta página.','success');return;}
+ if(window.WSUsage&&!window.WSUsage.can())return;
+ busy=true;submit.disabled=true;submit.textContent='Encurtando...';hideResult();inform('Enviando o endereço ao is.gd...');
+ const params=new URLSearchParams({format:'json',url:destination});if(alias)params.set('shorturl',alias);
+ try{
+  const response=await fetch('https://is.gd/create.php?'+params.toString(),{method:'GET',mode:'cors',cache:'no-store',credentials:'omit'});
+  if(!response.ok)throw new Error('O serviço is.gd está indisponível agora (HTTP '+response.status+').');
+  const data=await response.json();
+  if(data.errorcode)throw new Error(getError(data));
+  if(typeof data.shorturl!=='string'||!/^https:\/\/is\.gd\/[A-Za-z0-9_]+$/.test(data.shorturl))throw new Error('O is.gd retornou uma resposta inesperada.');
+  cache.set(key,data.shorturl);
+  if(window.WSUsage)window.WSUsage.consume();
+  showResult(data.shorturl);inform('Link encurtado com sucesso!','success');
+ }catch(err){
+  let msg=err?.message||'Erro ao encurtar o link.';
+  if(err instanceof TypeError||err instanceof SyntaxError)msg='Não foi possível consultar o is.gd. Verifique a conexão ou tente outra rede/navegador.';
+  inform(msg,'error');
+ }finally{busy=false;submit.disabled=false;submit.textContent='Encurtar link';}
+});
+reset.addEventListener('click',()=>{if(busy)return;form.reset();hideResult();inform('');original.focus();});
+copy.addEventListener('click',async()=>{
+ if(result.hidden)return;const value=output.textContent;
+ try{await navigator.clipboard.writeText(value);copyStatus.textContent='Link copiado!';}
+ catch{
+  const range=document.createRange();range.selectNodeContents(output);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);
+  try{if(document.execCommand('copy'))copyStatus.textContent='Link copiado!';else copyStatus.textContent='Selecione o endereço acima e copie manualmente.';}
+  catch{copyStatus.textContent='Selecione o endereço acima e copie manualmente.';}
+  selection.removeAllRanges();
+ }
+});
+})();
+</script>
+</body>
+</html>
